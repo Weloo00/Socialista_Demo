@@ -1,1 +1,948 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131}button,html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}@media (prefers-color-scheme:dark){body{background-color:#222;color:#d9d9d9}body a{color:#fff}body a:hover{color:#ee730a;text-decoration:underline}body .lds-ring div{border-color:#999 transparent transparent}body .font-red{color:#b20f03}body .big-button,body .pow-button{background-color:#4693ff;color:#1d1d1d}body #challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=)}body #challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+)}}body{display:flex;flex-direction:column;min-height:100vh}body.no-js .loading-spinner{visibility:hidden}body.no-js .challenge-running{display:none}body.dark{background-color:#222;color:#d9d9d9}body.dark a{color:#fff}body.dark a:hover{color:#ee730a;text-decoration:underline}body.dark .lds-ring div{border-color:#999 transparent transparent}body.dark .font-red{color:#b20f03}body.dark .big-button,body.dark .pow-button{background-color:#4693ff;color:#1d1d1d}body.dark #challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=)}body.dark #challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+)}body.light{background-color:transparent;color:#313131}body.light a{color:#0051c3}body.light a:hover{color:#ee730a;text-decoration:underline}body.light .lds-ring div{border-color:#595959 transparent transparent}body.light .font-red{color:#fc574a}body.light .big-button,body.light .pow-button{background-color:#003681;border-color:#003681;color:#fff}body.light #challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=)}body.light #challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+)}a{background-color:transparent;color:#0051c3;text-decoration:none;transition:color .15s ease}a:hover{color:#ee730a;text-decoration:underline}.main-content{margin:8rem auto;max-width:60rem;width:100%}.heading-favicon{height:2rem;margin-right:.5rem;width:2rem}@media (width <= 720px){.main-content{margin-top:4rem}.heading-favicon{height:1.5rem;width:1.5rem}}.footer,.main-content{padding-left:1.5rem;padding-right:1.5rem}.main-wrapper{align-items:center;display:flex;flex:1;flex-direction:column}.font-red{color:#b20f03}.spacer{margin:2rem 0}.h1{font-size:2.5rem;font-weight:500;line-height:3.75rem}.h2{font-weight:500}.core-msg,.h2{font-size:1.5rem;line-height:2.25rem}.body-text,.core-msg{font-weight:400}.body-text{font-size:1rem;line-height:1.25rem}@media (width <= 720px){.h1{font-size:1.5rem;line-height:1.75rem}.h2{font-size:1.25rem}.core-msg,.h2{line-height:1.5rem}.core-msg{font-size:1rem}}#challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+);padding-left:34px}#challenge-error-text,#challenge-success-text{background-repeat:no-repeat;background-size:contain}#challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=);padding-left:42px}.text-center{text-align:center}.big-button{border:.063rem solid #0051c3;border-radius:.313rem;font-size:.875rem;line-height:1.313rem;padding:.375rem 1rem;transition-duration:.2s;transition-property:background-color,border-color,color;transition-timing-function:ease}.big-button:hover{cursor:pointer}.captcha-prompt:not(.hidden){display:flex}@media (width <= 720px){.captcha-prompt:not(.hidden){flex-wrap:wrap;justify-content:center}}.pow-button{background-color:#0051c3;color:#fff;margin:2rem 0}.pow-button:hover{background-color:#003681;border-color:#003681;color:#fff}.footer{font-size:.75rem;line-height:1.125rem;margin:0 auto;max-width:60rem;width:100%}.footer-inner{border-top:1px solid #d9d9d9;padding-bottom:1rem;padding-top:1rem}.clearfix:after{clear:both;content:"";display:table}.clearfix .column{float:left;padding-right:1.5rem;width:50%}.diagnostic-wrapper{margin-bottom:.5rem}.footer .ray-id{text-align:center}.footer .ray-id code{font-family:monaco,courier,monospace}.core-msg,.zone-name-title{overflow-wrap:break-word}@media (width <= 720px){.diagnostic-wrapper{display:flex;flex-wrap:wrap;justify-content:center}.clearfix:after{clear:none;content:none;display:initial;text-align:center}.column{padding-bottom:2rem}.clearfix .column{float:none;padding:0;width:auto;word-break:keep-all}.zone-name-title{margin-bottom:1rem}}.loading-spinner{height:76.391px}.lds-ring{display:inline-block;position:relative}.lds-ring,.lds-ring div{height:1.875rem;width:1.875rem}.lds-ring div{animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border:.3rem solid transparent;border-radius:50%;border-top-color:#313131;box-sizing:border-box;display:block;position:absolute}.lds-ring div:first-child{animation-delay:-.45s}.lds-ring div:nth-child(2){animation-delay:-.3s}.lds-ring div:nth-child(3){animation-delay:-.15s}@keyframes lds-ring{0%{transform:rotate(0)}to{transform:rotate(1turn)}}@media screen and (-ms-high-contrast:active),screen and (-ms-high-contrast:none){.main-wrapper,body{display:block}}.rtl .heading-favicon{margin-left:.5rem;margin-right:0}.rtl #challenge-success-text{background-position:100%;padding-left:0;padding-right:42px}.rtl #challenge-error-text{background-position:100%;padding-left:0;padding-right:34px}</style><meta http-equiv="refresh" content="375"></head><body class="no-js"><div class="main-wrapper" role="main"><div class="main-content"><noscript><div id="challenge-error-title"><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></div></noscript></div></div><script>(function(){window._cf_chl_opt={cvId: '3',cZone: "craftohtml.themezaa.com",cType: 'managed',cNounce: '42157',cRay: '878c8d60d82473cf',cHash: '0fd145acc7fb662',cUPMDTk: "\/portfolio-attractive-four-column.html?__cf_chl_tk=kEEj4hrObcrCWGJCj.UQ5V7xabaz3S1UfajCEnJrOLY-1713861662-0.0.1.1-1685",cFPWv: 'b',cTTimeMs: '1000',cMTimeMs: '375000',cTplV: 5,cTplB: 'cf',cK: "visitor-time",fa: "\/portfolio-attractive-four-column.html?__cf_chl_f_tk=kEEj4hrObcrCWGJCj.UQ5V7xabaz3S1UfajCEnJrOLY-1713861662-0.0.1.1-1685",md: "4OuqcySYGIhwYtNDoToruh3JXJWGZNhhU4ykgixZ4yU-1713861662-1.1.1.1-vypBReRRLa5BSsun72m_kCxDuQ6twb5o06uU4JsAA_46RV4lts5_58VS8EPAH5lkwl4Zs9ZK.7TDSh_JZawQI7zIuL.27.cwCm_g5ugXlzGC4bGFU99JPLllNceVscpylmOq4d7IXZQ3ocEvSn9YIk_RZJkxepgaBqQxLqk.Go.l_OW6.4WzmpmpuV9Xko0IvQC4RtTTyyXUOEwyJUp2OBv94PBPJM030gqvS1I._aO0xLY.rAtqFH47_V2eF4f1ILaWpQ_bQeDoIYKxNDCjp5jBuLMl3PAT2qifUCwgSmzbQ5Ys7EN447IAw73qX9n7ceBKvny_UOh90Ntu5JzYyyMJt_BejN_.N92Vc64fZCGfzJWVEYJL3hGbubENVJb3rkPsueCvp9YqtUAtziqlUvn1oWapl_6PpAr8NWQH5.nTcUoyttJ2_RHjCQEGnroJzoQ4NCSY4riqRCxE.9Hc8FztkmkM_k3.Hg.UFE_ol_up16HPtxkV5.M1s1xagrfz7ks5G9J7OErC57cJAHoHkNlsCoHYVPS4kIIW5mrxq0btnZBKanvdp_a5NS.x24r_hNpcQhSatPRlJlvqx9hhQFI1MM5O3cVQdJlHxj.qIr.JcpjGBfgSsxmcSGI0Ru0LpDVucmNufJ2I6CC_l1AK6gIwtwseYHFx870S98O.42OLrAterEiSpNQqkLKNki_Q8n_qbY7NVRBGlmiN6sKAQAFMJWLlnc6AZAP_TZBqBlSqv_p10awmOy8SKw2fhlbcOmI4uAixwY_YzretChbxZFxbL9kCsllxUkcNlHhiqLoFq0yfVlzH9S0TglRU_In8Cld7jOa6BY4s.atnQP9cjOL6_h6ZToedtofcQsTHr0LcK.HKFe40CUDIqsg.XjIlnQfxFBFbjwa183nguu5TAKENdGmOmQxVmpeU9v8FGqOZBDY_BCqEOfqCM29Qur8VnIe2vPkMaDVTvbKLiv1YGhcjFr_bofVxvshFed43y5hTiTl.yu_4BGRgRu.jEhgrawJKbd9SwUjsnw0eXwQqCnyljVGqBGL9fqmIZqWdLsSqewBYkfBpa4wuz5zb.zRysHNKAwM_emDT6lhFT7b2RuK3dEuQAXV2wqwKob9smGHXOZzuwhqtW7kOoIZwRydtnqufcaQqcgR7ChNXAJO92Kw1cWpeEIlHUOHbJsiozN2jtv5FJI4bA3NgeYDmZp4KIh1lepuqwNpovq6FisoDp5kwVnZ3bkJ.TbcDRno6U4cJyuX9GubPmHI4gUkFQfLZQ8O9uoIHTXj8cGoZndTqhNqmGtkq8Wpg.sqh5gQx.K0iVcRrw9XATC.7gPs8jTrEMzSTHRv4AZU5PEnkj7R06397qdJ_G0kAmzbjtSdO7n8HU43WZOHF52ABHMN5mfpF8SwveG67EQ4KT5THrJQyxRXTUojCAi_V3UlNIxj.AEMBn29m4rdbO48ew8TSb7pDTpO0kXE.Vg3ZKU7rOS3PHI.s5OBho3bohWSqiqN7SsVEjz3kwVP05RFkgn4rHSZlmrUgEuq6f8Hqae0VqO5WZcNpvx6XJJ6ClRr439OkOanfyYNq88MWJx_tzpQb0TziohtcY3UhuGwSXKGNIu.y0A",mdrd: "h26cTwG5KieDngBE23qRh1dxEtZsz645e4MPTbwE_2Y-1713861662-1.1.1.1-bnU47mVCYTW4sDRCRZSu6vOcNnymPrdVB9F0lAfX8axYl6VK8plXc.ikNVMG6qF8Cmrw1K0YjrDq4eULOyrQ5_bvzL9A3oN8zKqMOMClbpT0B_a5iG4HMsntgBBDxmCcVbpWsEtElK6_8KQYjU4YY.uCh0H4AxhWBGid5DcB6xXxXV9EsUcI_w660cv4RLeaXQp1GeVU2F1pRF5gcVQhv.9DXtw9b84JGoWOUKBCH2HUxPX24fzxzdlH6xsM8PE7rS4PD7ebDAgxO9xzOIVCb._MteHfJ9gVqvu.rsk4306bV3Kgg_7wUbfZvifgOU6ZniFGMTxKRwkUaIneCIUT10WEc1Q9gMCo.tqJK3CRVBkg3K324plbHzs7vBN1A1iehSBECdiHZkuDqw5y8SwhCpc9IVbKfetrQsF4WBzRmkc3eN2nr36LeZARxUSmzUeIsjif_86Oq.4jPDUYKK.ilc_uzFRba_o_5iMig_uy.raRPNsj.PUehlwk4ZFu6Gkn5kiBfG1XSPGl6mqT3ROFtQVokrvLuwqUGDE7Er1IsWKxjfoOII6sXGOlTD8B4Tfb62mhlwl9HqTJ7ct7RnkGZTMBHYhCJvKjYV6MRCWA9g_PLb4c34vzbHMISw3YQdmOo0Fr.Ll9NDmodlJmoHkJCBaCxTc5B41yb.XK8pKyvYBzVmx69i8GV3Dz0MOaeHi3365rHZ5h1wyMW1jbqb3WOfSapP1phBjSt1fbPS90iEkxYmxsoSs_AjdrJDlWfLJM7bY3oHzeG8lQycIWk6.yDKddxEBVOQK7g8siH7dmg6ONyS0sCVb30JpjQXlMzRS7p.pDQ6wOF7Ud2XpRayWQf.T9gSzGK8naVtm_5ABE0MwPZcRimz8mGfYTF6xWe0dCUYEWz.8aivu.FtzzjqIhM.u0JpKEKWcRVejQV.OMmT2et31yWWPu0bvJ7rmw67acKpCBBurGbJadYSf6GgJeF7rrmmMzyCWbaG69C0a2GCRn0zwWthdz8ok461zdrkdidQLA8lJ.UDHMie31dUyN.uUtGJ8UPWwTdtIshYPJKSoeW_x86aQqWf_4VFjxvOQfIQe0nAwquI45uF2kbfHwzcPnbkqu.8YjzrOBChyemsHBy9C.MBDN5ao2nOoQP6OtoVpXefsO0nxhxcv4voMPrYwjUA6gWR3rq5hiAo_.ZOzXH339BRt.vGTqF9TMkVI_BYAQ7HnsI7PGrAD2bN8w.c5Y_8zu7J4gGzHLwxUgaYfuXFFoanBnmPbkz.8IiaIEMdjpRBCbEhrjkPrCQMoNel8GAfvjdM.yG50kdpbuqF1IH7LwIJz65VP51R413gTJw8FrxAkDUwb4LZotlKJbT2yN1J5B3LkcKOo9K.2a6NhQaQ8GsBnQmIS72KBobAdJp7Xnpg5Rl8ZTH9LhOC1hsHYpJy.g_27dWP3fPdzq3laBPmqYb1DDwkZFFIjK3g2S8h9JiKVkwziJRuhpEGfqBvPxWioN3C6mErxYyHD1xipZaRhTp6meXdBgu8A6vf.Vh7.LWG7QEbkYCia7oLul.UMHoD2lrrX_Uv8.bJQQncXaA75UJaiwj48NZN06NZuy0pjqbUr2CGoEOIVV8kfwW36VPcjSBnS9iwYBmCJSvDJ_eaFfEK3HDuqUd22gtIN2Odx2kk17JGTnO0t0lGtxC6c3dqsfBrYAasOR4WRaYLOLO8Sb5c9TuJZ3Is0NVJQHQGUywGWephp.LJGn7TMYoZQnLywUk0SsgN_1otHys7IbqEx4hqh.5JDcwW01LRxTn5BVkpybxJS6rbzcZuyucnOQ7jkRL28wqVfKX._KEOc7G9DBLxoe81waRLcjRQvguWt6lfnyZ4VmFzBn71qJhYFJiIeGSGAzupnyy3Wktp8QwA83HF389QGo8_TjD6RmFjU8aPcWJ3wG2jSkLEXVnVHZic_L_dI.B273mipD8usd9ZV7EsHOZ3rDRmtK1dmTbpD97W5MeB3wXH60.3R49H1FDNaz8ELtKsx16Y6Ktr8",cRq: {ru: 'aHR0cHM6Ly9jcmFmdG9odG1sLnRoZW1lemFhLmNvbS9wb3J0Zm9saW8tYXR0cmFjdGl2ZS1mb3VyLWNvbHVtbi5odG1s',ra: 'TW96aWxsYS80LjUgKGNvbXBhdGlibGU7IEhUVHJhY2sgMy4weDsgV2luZG93cyA5OCk=',rm: 'R0VU',d: 'VM3A3KGJ2fEE1wYkgPWIWGUcija65GyLrlN5IL4ckPK+vCyr1afKr6HHPhzfdwrnq3S/7UEcTiVgm/i66RxFeBzgMBCbFhZwNm659ThRhtCjx2ilY6fMSeSTSTGGNUiU0Krv5HPG3ebwvMHFPfVMDlXlhNSzHmdi1mk08Wc9vLRE7RsDnckpVxBzboap4JlNJFBjKdRIOckXfN52Mh8ppmRFQ5IhMzTTPxYodLRf6bgKyYi4AxxvdytteUf73JnAWSNqkOX1vPCVVv+84d6OvlzAzP9dT/CqLOy/j//uKo9ruOZj2p4M3Q22/uKmrT090z60qhLhQqzMQqkzx3dqW+6Lgl3AmJlhQgyzd33ZiwDRaPOPdlTD1KpdlkU1b0Bv8c1XTcbosK/obZkJ6tdprVb8Fif1gE6nmpqJ0rIkSaphuLKc/VHKgkgCbSww6kHbPjEfiOlpBGlP6ZqYwJjei+YWqBl2ZSFEuxxPMlzQnfVTUuVeHa+GF/xJzVzx2C1F+rR+nJaIJmM9ph5SEIOrEemdMjrynpwP/81yx+q51pUBYCpqqps8oG85FwD5ckOB3FxcOUWcL+yuOSMWPIzXkZJMskXtYajlMDePisFRt/o=',t: 'MTcxMzg2MTY2Mi44NzIwMDA=',cT: Math.floor(Date.now() / 1000),m: '0INA+Dzja8GIwH4XRl97uNZ9IcZwjprbxIaB68Zo/6k=',i1: 'zt3ORFlDGz99BS+VjkBT4A==',i2: 'me3W91bK6yRYU7dKwLVqNw==',zh: 'I6MnMZeTTI1mZTZ6F/nNx1Bgs9GwmnZOBj9gowj/Juk=',uh: '9nhh8pPb15w9F3Prh3/JVoxGAtQI3Uvfk+klfHhR5+g=',hh: '2iX7p45avrZToViy6O9g4uk1pUu6QBAf2mNMTzABnyA=',}};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=878c8d60d82473cf';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, "\/portfolio-attractive-four-column.html?__cf_chl_rt_tk=kEEj4hrObcrCWGJCj.UQ5V7xabaz3S1UfajCEnJrOLY-1713861662-0.0.1.1-1685" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script></body></html>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Socialista - The Multipurpose HTML5 Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="ThemeZaa">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Elevate your online presence with Socialista - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/responsive.min.css" />
+</head>
+<body data-mobile-nav-style="classic">
+
+<header>
+
+    <nav class="navbar navbar-expand-lg header-light header-reverse header-demo" data-header-hover="light">
+        <div class="container-fluid">
+            <div class="col-auto col-lg-2 me-lg-0 me-auto">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt class="default-logo">
+                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt class="alt-logo">
+                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt class="mobile-logo">
+                </a>
+            </div>
+            <div class="col-auto col-lg-8 menu-order position-static">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Pre-Built Sites</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content background-position-center cover-background" aria-labelledby="navbarDropdownMenuLink1" style="background-image: url(images/pre-built-sites-bg.jpg)">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li><a href="demo-corporate.html" target="_blank">Corporate<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">Trendy</span></a></li>
+                                        <li><a href="demo-marketing.html" target="_blank">Marketing</a></li>
+                                        <li><a href="demo-accounting.html" target="_blank">Accounting<span class="label bg-light-red text-red border-radius-26px">Classic</span></a></li>
+                                        <li><a href="demo-beauty-salon.html" target="_blank">Beauty Salon</a></li>
+                                        <li><a href="demo-architecture.html" target="_blank">Architecture</a></li>
+                                        <li><a href="demo-ebook.html" target="_blank">eBook</a></li>
+                                        <li><a href="demo-seo-agency.html" target="_blank">SEO Agency</a></li>
+                                        <li><a href="demo-hosting.html" target="_blank">Hosting</a></li>
+                                        <li><a href="demo-consulting.html" target="_blank">Consulting</a></li>
+                                        <li><a href="demo-business.html" target="_blank">Business</a></li>
+                                        <li><a href="demo-interactive-portfolio.html" target="_blank">Interactive Portfolio</a></li>
+                                        <li><a href="demo-spa-salon.html" target="_blank">Spa Salon<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Clean</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-branding-agency.html" target="_blank">Branding Agency<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-elearning.html" target="_blank">eLearning</a></li>
+                                        <li><a href="demo-it-business.html" target="_blank">IT Business<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Modern</span></a></li>
+                                        <li><a href="demo-barber.html" target="_blank">Barber</a></li>
+                                        <li><a href="demo-hotel-and-resort.html" target="_blank">Hotel & Resort</a></li>
+                                        <li><a href="demo-real-estate.html" target="_blank">Real Estate</a></li>
+                                        <li><a href="demo-jewellery-store.html" target="_blank">Jewellery Store</a></li>
+                                        <li><a href="demo-travel-agency.html" target="_blank">Travel Agency</a></li>
+                                        <li><a href="demo-gym-and-fitness.html" target="_blank">Gym & Fitness</a></li>
+                                        <li><a href="demo-design-agency.html" target="_blank">Design Agency<span class="label bg-light-red text-red border-radius-26px">Creative</span></a></li>
+                                        <li><a href="demo-photography.html" target="_blank">Photography</a></li>
+                                        <li><a href="demo-pizza-parlor.html" target="_blank">Pizza Parlor</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-restaurant.html" target="_blank">Restaurant<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-scattered-portfolio.html" target="_blank">Scattered Portfolio</a></li>
+                                        <li><a href="demo-data-analysis.html" target="_blank">Data Analysis</a></li>
+                                        <li><a href="demo-medical.html" target="_blank">Medical</a></li>
+                                        <li><a href="demo-horizontal-portfolio.html" target="_blank">Horizontal Portfolio</a></li>
+                                        <li><a href="demo-product-showcase.html" target="_blank">Product Showcase<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">Trendy</span></a></li>
+                                        <li><a href="demo-finance.html" target="_blank">Finance</a></li>
+                                        <li><a href="demo-fashion-store.html" target="_blank">Fashion Store</a></li>
+                                        <li><a href="demo-music-onepage.html" target="_blank">Music</a></li>
+                                        <li><a href="demo-vertical-portfolio.html" target="_blank">Vertical Portfolio</a></li>
+                                        <li><a href="demo-freelancer.html" target="_blank">Freelancer<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Clean</span></a></li>
+                                        <li><a href="demo-charity.html" target="_blank">Charity</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-digital-agency.html" target="_blank">Digital Agency</a></li>
+                                        <li><a href="demo-web-agency.html" target="_blank">Web Agency<span class="label bg-white-ice text-jade border-radius-26px">Creative</span></a></li>
+                                        <li><a href="demo-yoga-and-meditation.html" target="_blank">Yoga & Meditation</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Startup</a></li>
+                                        <li><a href="demo-application.html" target="_blank">Application<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-lawyer.html" target="_blank">Lawyer</a></li>
+                                        <li><a href="demo-conference.html" target="_blank">Conference</a></li>
+                                        <li><a href="demo-minimal-portfolio.html" target="_blank">Minimal Portfolio<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-decor-store.html" target="_blank">Decor Store</a></li>
+                                        <li><a href="demo-magazine.html" target="_blank">Magazine</a></li>
+                                        <li><a href="demo-blogger.html" target="_blank">Blogger</a></li>
+                                        <li><a href="demo-wedding-invitation.html" target="_blank">Wedding Invitation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Pages</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li class="sub-title">About Pages</li>
+                                        <li><a href="demo-branding-agency-about.html" target="_blank">About - Branding<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-restaurant-about.html" target="_blank">About - Restaurant</a></li>
+                                        <li><a href="demo-minimal-portfolio-about.html" target="_blank">About - Minimal</a></li>
+                                        <li><a href="demo-accounting-company.html" target="_blank">About - Accounting</a></li>
+                                        <li><a href="demo-architecture-about.html" target="_blank">About - Architecture</a></li>
+                                        <li><a href="demo-digital-agency-about.html" target="_blank">About - Digital</a></li>
+                                        <li><a href="demo-photography-about.html" target="_blank">About - Photography</a></li>
+                                        <li><a href="demo-design-agency-about.html" target="_blank">About - Agency</a></li>
+                                        <li><a href="demo-marketing-about.html" target="_blank">About - Marketing<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-scattered-portfolio-about.html" target="_blank">About - Scattered</a></li>
+                                        <li><a href="demo-medical-about.html" target="_blank">About - Medical</a></li>
+                                        <li><a href="demo-web-agency-about.html" target="_blank">About - Web<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-startup-who-we-are.html" target="_blank">About - Startup</a></li>
+                                        <li><a href="demo-hotel-and-resort-about-us.html" target="_blank">About - Hotel</a></li>
+                                        <li><a href="demo-elearning-about.html" target="_blank">About - eLearning<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Services Pages</li>
+                                        <li><a href="demo-accounting-services.html" target="_blank">Services - Accounting</a></li>
+                                        <li><a href="demo-marketing-services.html" target="_blank">Services - Marketing</a></li>
+                                        <li><a href="demo-branding-agency-services.html" target="_blank">Services - Branding<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-minimal-portfolio-expertise.html" target="_blank">Services - Minimal</a></li>
+                                        <li><a href="demo-web-agency-expertise.html" target="_blank">Services - Web</a></li>
+                                        <li><a href="demo-architecture-services.html" target="_blank">Services - Architecture</a></li>
+                                        <li><a href="demo-digital-agency-expertise.html" target="_blank">Services - Digital</a></li>
+                                        <li><a href="demo-startup-services.html" target="_blank">Services - Startup</a></li>
+                                        <li><a href="demo-scattered-portfolio-expertise.html" target="_blank">Services - Scattered</a></li>
+                                        <li><a href="demo-lawyer-practice-areas.html" target="_blank">Services - Lawyer</a></li>
+                                        <li><a href="demo-corporate-services.html" target="_blank">Services - Corporate<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-data-analysis-what-we-do.html" target="_blank">Services - Data Analysis</a></li>
+                                        <li><a href="demo-marketing-services-details.html" target="_blank">Single – Marketing</a></li>
+                                        <li><a href="demo-accounting-services-details.html" target="_blank">Single – Accounting</a></li>
+                                        <li><a href="demo-branding-agency-services-detail.html" target="_blank">Single - Branding<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Contact Pages</li>
+                                        <li><a href="demo-scattered-portfolio-contact.html" target="_blank">Contact - Scattered</a></li>
+                                        <li><a href="demo-branding-agency-contact.html" target="_blank">Contact - Branding<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-photography-contact.html" target="_blank">Contact - Photography</a></li>
+                                        <li><a href="demo-hotel-and-resort-contact.html" target="_blank">Contact - Hotel</a></li>
+                                        <li><a href="demo-spa-salon-contact.html" target="_blank">Contact - Spa</a></li>
+                                        <li><a href="demo-it-business-contact.html" target="_blank">Contact - IT Business<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-architecture-contact.html" target="_blank">Contact - Architecture</a></li>
+                                        <li><a href="demo-design-agency-contact.html" target="_blank">Contact - Agency</a></li>
+                                        <li><a href="demo-marketing-contact.html" target="_blank">Contact - Marketing</a></li>
+                                        <li><a href="demo-horizontal-portfolio-contact.html" target="_blank">Contact - Portfolio</a></li>
+                                        <li><a href="demo-accounting-contact.html" target="_blank">Contact - Accounting</a></li>
+                                        <li><a href="demo-elearning-contact.html" target="_blank">Contact - eLearning</a></li>
+                                        <li><a href="demo-corporate-contact.html" target="_blank">Contact - Corporate</a></li>
+                                        <li><a href="demo-real-estate-contact.html" target="_blank">Contact - Real Estate</a></li>
+                                        <li><a href="demo-web-agency-contact.html" target="_blank">Contact - Web</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Other Pages</li>
+                                        <li><a href="demo-corporate-pricing.html" target="_blank">Pricing - Corporate</a></li>
+                                        <li><a href="demo-hosting-pricing.html" target="_blank">Pricing - Hosting</a></li>
+                                        <li><a href="demo-data-analysis-pricing.html" target="_blank">Pricing - Data Analysis</a></li>
+                                        <li><a href="demo-marketing-pricing.html" target="_blank">Pricing - Marketing<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-consulting-process.html" target="_blank">Process - Consulting</a></li>
+                                        <li><a href="demo-accounting-process.html" target="_blank">Process - Accounting</a></li>
+                                        <li><a href="demo-startup-clients.html" target="_blank">Clients - Startup</a></li>
+                                        <li><a href="demo-business-clients.html" target="_blank">Clients - Business</a></li>
+                                        <li><a href="demo-corporate-customer-stories.html" target="_blank">Testimonials - Corporate</a></li>
+                                        <li><a href="demo-data-analysis-testimonials.html" target="_blank">Reviews - Data Analysis</a></li>
+                                        <li><a href="demo-finance-team.html" target="_blank">Team - Finance</a></li>
+                                        <li><a href="demo-marketing-team.html" target="_blank">Team - Marketing</a></li>
+                                        <li><a href="demo-web-agency-people.html" target="_blank">Team - Web<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-restaurant-chefs.html" target="_blank">Chefs - Restaurant</a></li>
+                                        <li><a href="demo-pizza-parlor-chefs.html" target="_blank">Chefs - Pizza Parlor</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Other Pages</li>
+                                        <li><a href="demo-real-estate-agents.html" target="_blank">Agents - Real Estate</a></li>
+                                        <li><a href="demo-elearning-instructors.html" target="_blank">Instructors - eLearning</a></li>
+                                        <li><a href="demo-hotel-and-resort-amenities.html" target="_blank">Amenities - Hotel</a></li>
+                                        <li><a href="demo-medical-timetable.html" target="_blank">Timetable - Medical</a></li>
+                                        <li><a href="demo-photography-award.html" target="_blank">Award - Photography</a></li>
+                                        <li><a href="demo-decor-store-faq.html" target="_blank">FAQ - Decor Store</a></li>
+                                        <li><a href="demo-charity-causes.html" target="_blank">Causes - Charity</a></li>
+                                        <li><a href="demo-restaurant-menu.html" target="_blank">Menu - Restaurant</a></li>
+                                        <li><a href="demo-hotel-and-resort-bistro.html" target="_blank">Menu - Hotel<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-pizza-parlor-menu.html" target="_blank">Menu - Pizza</a></li>
+                                        <li><a href="demo-application-features.html" target="_blank">Features - Application</a></li>
+                                        <li><a href="404.html">Error 404</a></li>
+                                        <li><a href="search-result.html">Search Results</a></li>
+                                        <li><a href="maintenance.html">Maintenance</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="javascript:void(0);" class="nav-link">Portfolio</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Classic<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-classic-two-column.html">Classic 2 Column</a></li>
+                                        <li><a href="portfolio-classic-three-column.html">Classic 3 Column</a></li>
+                                        <li><a href="portfolio-classic-four-column.html">Classic 4 Column</a></li>
+                                        <li><a href="portfolio-classic-masonry.html">Classic Masonry</a></li>
+                                        <li><a href="portfolio-classic-metro.html">Classic Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Boxed<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-boxed-two-column.html">Boxed 2 Column</a></li>
+                                        <li><a href="portfolio-boxed-three-column.html">Boxed 3 Column</a></li>
+                                        <li><a href="portfolio-boxed-four-column.html">Boxed 4 Column</a></li>
+                                        <li><a href="portfolio-boxed-masonry.html">Boxed Masonry</a></li>
+                                        <li><a href="portfolio-boxed-metro.html">Boxed Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Transform<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-transform-two-column.html">Transform 2 Column</a></li>
+                                        <li><a href="portfolio-transform-three-column.html">Transform 3 Column</a></li>
+                                        <li><a href="portfolio-transform-four-column.html">Transform 4 Column</a></li>
+                                        <li><a href="portfolio-transform-masonry.html">Transform Masonry</a></li>
+                                        <li><a href="portfolio-transform-metro.html">Transform Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Creative<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-creative-two-column.html">Creative 2 Column</a></li>
+                                        <li><a href="portfolio-creative-three-column.html">Creative 3 Column</a></li>
+                                        <li><a href="portfolio-creative-four-column.html">Creative 4 Column</a></li>
+                                        <li><a href="portfolio-creative-masonry.html">Creative Masonry</a></li>
+                                        <li><a href="portfolio-creative-metro.html">Creative Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Attractive<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-attractive-two-column.html">Attractive 2 Column</a></li>
+                                        <li><a href="portfolio-attractive-three-column.html">Attractive 3 Column</a></li>
+                                        <li><a href="portfolio-attractive-four-column.html">Attractive 4 Column</a></li>
+                                        <li><a href="portfolio-attractive-masonry.html">Attractive Masonry</a></li>
+                                        <li><a href="portfolio-attractive-metro.html">Attractive Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Clean<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-clean-two-column.html">Clean 2 Column</a></li>
+                                        <li><a href="portfolio-clean-three-column.html">Clean 3 Column</a></li>
+                                        <li><a href="portfolio-clean-four-column.html">Clean 4 Column</a></li>
+                                        <li><a href="portfolio-clean-masonry.html">Clean Masonry</a></li>
+                                        <li><a href="portfolio-clean-metro.html">Clean Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Simple<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-simple-two-column.html">Simple 2 Column</a></li>
+                                        <li><a href="portfolio-simple-three-column.html">Simple 3 Column</a></li>
+                                        <li><a href="portfolio-simple-four-column.html">Simple 4 Column</a></li>
+                                        <li><a href="portfolio-simple-masonry.html">Simple Masonry</a></li>
+                                        <li><a href="portfolio-simple-metro.html">Simple Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Modern<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-modern-two-column.html">Modern 2 Column</a></li>
+                                        <li><a href="portfolio-modern-three-column.html">Modern 3 Column</a></li>
+                                        <li><a href="portfolio-modern-four-column.html">Modern 4 Column</a></li>
+                                        <li><a href="portfolio-modern-masonry.html">Modern Masonry</a></li>
+                                        <li><a href="portfolio-modern-metro.html">Modern Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Other<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-slider.html">Portfolio Slider</a></li>
+                                        <li><a href="portfolio-parallax.html">Portfolio Parallax</a></li>
+                                        <li><a href="portfolio-justified-gallery.html">Justified Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Single Project<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-digital-agency-single-project-minimal.html" target="_blank">Single - Minimal</a></li>
+                                        <li><a href="demo-branding-agency-single-project-slider.html" target="_blank">Single - Slider</a></li>
+                                        <li><a href="demo-architecture-single-project-gallery.html" target="_blank">Single - Gallery</a></li>
+                                        <li><a href="demo-interactive-portfolio-single-project-modern.html" target="_blank">Single - Modern</a></li>
+                                        <li><a href="demo-design-agency-single-project-simple.html" target="_blank">Single - Simple</a></li>
+                                        <li><a href="demo-web-agency-single-project-creative.html" target="_blank">Single - Creative</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Elements</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink4">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li><a href="element-accordion.html">Accordion</a></li>
+                                        <li><a href="element-buttons.html">Button</a></li>
+                                        <li><a href="element-team.html">Team</a></li>
+                                        <li><a href="element-testimonials.html">Testimonials<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="element-clients.html">Clients</a></li>
+                                        <li><a href="element-review.html">Review</a></li>
+                                        <li><a href="element-subscribe.html">Subscribe</a></li>
+                                        <li><a href="element-call-to-action.html">Call to Action</a></li>
+                                        <li><a href="element-tab.html">Tab<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="element-google-map.html">Google Map<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="element-contact-form.html">Contact Form</a></li>
+                                        <li><a href="element-columns.html">Columns</a></li>
+                                        <li><a href="element-alert-boxes.html">Alert Boxes</a></li>
+                                        <li><a href="element-image-gallery.html">Image Gallery</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="element-progress-bar.html">Progress Bar</a></li>
+                                        <li><a href="element-process-step.html">Process Step<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="element-icon-with-text.html">Icon with Text<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="element-shape-dividers.html">Shape Dividers</a></li>
+                                        <li><a href="element-counters.html">Counters</a></li>
+                                        <li><a href="element-countdown.html">Countdown</a></li>
+                                        <li><a href="element-fancy-text-box.html">Fancy Text Box</a></li>
+                                        <li><a href="element-heading.html">Heading</a></li>
+                                        <li><a href="element-dropcaps.html">Dropcaps</a></li>
+                                        <li><a href="element-blockquote.html">Blockquote</a></li>
+                                        <li><a href="element-highlights.html">Highlights</a></li>
+                                        <li><a href="element-lists.html">Lists</a></li>
+                                        <li><a href="element-social-icons.html">Social Icons</a></li>
+                                        <li><a href="element-pricing-table.html">Pricing Table</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="element-interactive-banners.html">Interactive Banners</a></li>
+                                        <li><a href="element-services-box.html">Services Box</a></li>
+                                        <li><a href="element-rotate-box.html">Rotate Box<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="element-instagram.html">Instagram</a></li>
+                                        <li><a href="element-parallax-scrolling.html">Parallax Scrolling</a></li>
+                                        <li><a href="element-sliding-box.html">Sliding Box<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="element-content-carousel.html">Content Carousel</a></li>
+                                        <li><a href="element-media.html">Media</a></li>
+                                        <li><a href="element-event.html">Event</a></li>
+                                        <li><a href="element-dividers.html">Dividers</a></li>
+                                        <li><a href="element-horizontal-list-item.html">Horizontal List Item</a></li>
+                                        <li><a href="element-banners.html">Banners</a></li>
+                                        <li><a href="element-carousel.html">Carousel</a></li>
+                                        <li><a href="element-tilt-effect.html">Tilt Effect<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                    </ul>
+                                    <ul class="col premium-element cover-background" style="background-image: url(images/premium-elements-bg.jpg)">
+                                        <li class="sub-title">Premium Elements</li>
+                                        <li><a href="element-adaptive-backgrounds.html">Adaptive Backgrounds</a></li>
+                                        <li><a href="element-sticky-column.html">Sticky Column</a></li>
+                                        <li><a href="element-3d-parallax-hover.html">3D Parallax Hover</a></li>
+                                        <li><a href="demo-restaurant.html" target="_blank">Custom Cursor</a></li>
+                                        <li><a href="element-animated-particles.html">Animated Particles</a></li>
+                                        <li><a href="element-marquee.html">Marquee</a></li>
+                                        <li><a href="element-fancy-heading.html">Fancy Heading</a></li>
+                                        <li><a href="element-fancy-images.html">Fancy Images</a></li>
+                                        <li><a href="element-scrolling-effects.html">Scrolling Effects</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="javascript:void(0);" class="nav-link">Features</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Header<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-business.html" target="_blank">Transparent Header</a></li>
+                                        <li><a href="demo-corporate.html" target="_blank">White Header</a></li>
+                                        <li><a href="header-dark.html" target="_blank">Dark Header</a></li>
+                                        <li><a href="demo-digital-agency.html" target="_blank">Left Navigation</a></li>
+                                        <li><a href="demo-branding-agency.html" target="_blank">Right Navigation</a></li>
+                                        <li><a href="demo-restaurant.html" target="_blank">Center Navigation</a></li>
+                                        <li><a href="demo-data-analysis.html" target="_blank">Header with Top Bar</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Header with Push</a></li>
+                                        <li><a href="demo-pizza-parlor.html" target="_blank">Center Logo</a></li>
+                                        <li><a href="header-top-logo.html" target="_blank">Top Logo</a></li>
+                                        <li><a href="demo-ebook.html" target="_blank">One Page Navigation</a></li>
+                                        <li><a href="header-mini.html" target="_blank">Mini Header</a></li>
+                                        <li><a href="demo-seo-agency.html" target="_blank">Header with Button</a></li>
+                                        <li><a href="demo-marketing.html" target="_blank">Header with Social</a></li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Left Menu<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="header-left-menu-simple.html" target="_blank">Left Menu Simple</a></li>
+                                                <li><a href="demo-minimal-portfolio.html" target="_blank">Left Menu Modern</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Hamburger Menu<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="demo-photography.html" target="_blank">Hamburger Simple</a></li>
+                                                <li><a href="demo-architecture.html" target="_blank">Hamburger Creative</a></li>
+                                                <li><a href="demo-freelancer.html" target="_blank">Hamburger Clean</a></li>
+                                                <li><a href="demo-gym-and-fitness.html" target="_blank">Hamburger Modern</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Header Type<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="header-always-fixed.html" target="_blank">Always Fixed</a></li>
+                                                <li><a href="demo-application.html" target="_blank">Disable Fixed</a></li>
+                                                <li><a href="demo-seo-agency.html" target="_blank">Reverse Header</a></li>
+                                                <li><a href="demo-accounting.html" target="_blank">Responsive Sticky</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Mobile Menu<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="demo-startup.html" target="_blank">Classic</a></li>
+                                                <li><a href="demo-yoga-and-meditation.html" target="_blank">Modern</a></li>
+                                                <li><a href="demo-scattered-portfolio.html" target="_blank">Full Screen</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Lightbox & Modal<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="modal-simple.html">Simple Modal</a></li>
+                                        <li><a href="modal-subscription.html">Subscription</a></li>
+                                        <li><a href="modal-contact-form.html">Contact Form</a></li>
+                                        <li><a href="modal-youtube-video.html">Youtube Video</a></li>
+                                        <li><a href="modal-vimeo-video.html">Vimeo Video</a></li>
+                                        <li><a href="modal-google-map.html">Google Map</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Icon Packs<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="icon-packs-icons-mind-line.html">Icons Mind Line</a></li>
+                                        <li><a href="icon-packs-feather.html">Feather</a></li>
+                                        <li><a href="icon-packs-font-awesome.html">Font Awesome</a></li>
+                                        <li><a href="icon-packs-themify.html">Themify</a></li>
+                                        <li><a href="icon-packs-bootstrap.html">Bootstrap</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Sliders<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-architecture.html" target="_blank">Revolution</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Swiper</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="animations.html">Animations</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-minimal-portfolio.html" target="_blank">Page Preloader</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-jewellery-store.html" target="_blank">Cookie Notify</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-startup.html" target="_blank">Back to Top</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-design-agency.html" target="_blank">Sticky Footer</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="javascript:void(0);" class="nav-link">Blog</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink6" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink6">
+                                <li class="dropdown"><a href="blog-grid.html">Blog Grid</a></li>
+                                <li class="dropdown"><a href="blog-classic.html">Blog Classic</a></li>
+                                <li class="dropdown"><a href="blog-metro.html">Blog Metro</a></li>
+                                <li class="dropdown"><a href="blog-masonry.html">Blog Masonry</a></li>
+                                <li class="dropdown"><a href="blog-simple.html">Blog Simple</a></li>
+                                <li class="dropdown"><a href="blog-date.html">Blog Date</a></li>
+                                <li class="dropdown"><a href="blog-only-text.html">Blog Only Text</a></li>
+                                <li class="dropdown"><a href="blog-side-image.html">Blog Side Image</a></li>
+                                <li class="dropdown"><a href="blog-modern.html">Blog Modern</a></li>
+                                <li class="dropdown"><a href="blog-standard.html">Blog Standard</a></li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Single Post<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-business-blog-single-modern.html" target="_blank">Single - Modern</a></li>
+                                        <li><a href="demo-elearning-blog-single-simple.html" target="_blank">Single - Simple</a></li>
+                                        <li><a href="demo-web-agency-blog-single-creative.html" target="_blank">Single - Creative</a></li>
+                                        <li><a href="demo-blogger-blog-single-classic.html" target="_blank">Single - Classic</a></li>
+                                        <li><a href="demo-architecture-blog-single-clean.html" target="_blank">Single - Clean</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Post Type<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="blog-post-type-standard.html">Post - Standard</a></li>
+                                        <li><a href="blog-post-type-gallery.html">Post - Gallery</a></li>
+                                        <li><a href="blog-post-type-slider.html">Post - Slider</a></li>
+                                        <li><a href="blog-post-type-audio.html">Post - Audio</a></li>
+                                        <li><a href="blog-post-type-video.html">Post - Video</a></li>
+                                        <li><a href="blog-post-type-blockquote.html">Post - Blockquote</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Shop</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink7" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink7">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li class="sub-title">Shop Layout</li>
+                                        <li><a href="demo-fashion-store-shop.html" target="_blank">Left Sidebar</a></li>
+                                        <li><a href="demo-fashion-store-right-sidebar.html" target="_blank">Right Sidebar</a></li>
+                                        <li><a href="demo-fashion-store-no-sidebar.html" target="_blank">No Sidebar</a></li>
+                                        <li><a href="demo-decor-store-collections.html" target="_blank">Collections - Style 01</a></li>
+                                        <li><a href="demo-jewellery-store-categories.html" target="_blank">Collections - Style 02</a></li>
+                                        <li><a href="demo-fashion-store-collection.html" target="_blank">Collections - Style 03</a></li>
+                                        <li><a href="demo-fashion-store-single-product.html" target="_blank">Single Product - Thumb Left</a></li>
+                                        <li><a href="demo-decor-store-single-product.html" target="_blank">Single Product - Thumb Bottom</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Utility Pages</li>
+                                        <li><a href="demo-decor-store-cart.html" target="_blank">Shopping Cart</a></li>
+                                        <li><a href="demo-decor-store-checkout.html" target="_blank">Checkout</a></li>
+                                        <li><a href="demo-decor-store-account.html" target="_blank">Login / Register</a></li>
+                                        <li><a href="demo-decor-store-faq.html" target="_blank">Help Center</a></li>
+                                        <li><a href="demo-fashion-store-wishlist.html" target="_blank">Wishlist</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title"><a href="index.html" target="_blank" class="p-0"><img src="images/banner-02.jpg" alt /></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title"><a href="index.html" target="_blank" class="p-0"><img src="images/banner-01.jpg" alt /></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto col-lg-2 text-end xs-pe-0">
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="https://1.envato.market/R53mL2" target="_blank" class="btn btn-dark-gray btn-small btn-switch-text btn-rounded text-transform-none btn-box-shadow purchase-envato">
+<span>
+<span class="btn-double-text" data-text="Purchase Socialista">Purchase Socialista</span>
+</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<section class="pb-0 ipad-top-space-margin md-pt-0">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
+                <div class="d-flex flex-column justify-content-center extra-very-small-screen">
+                    <h1 class="text-dark-gray alt-font ls-minus-1px fw-700 mb-20px">Portfolio attractive</h1>
+                    <h2 class="d-inline-block fw-400 ls-0px w-80 xs-w-100 mx-auto">Portfolio attractive - Four column layout</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="pt-0 ps-6 pe-6 xl-ps-4 xl-pe-4 lg-px-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+
+                <ul class="portfolio-filter nav nav-tabs justify-content-center border-0 fw-500 alt-font pb-5">
+                    <li class="nav active"><a data-filter="*" href="#">All</a></li>
+                    <li class="nav"><a data-filter=".selected" href="#">Selected</a></li>
+                    <li class="nav"><a data-filter=".digital" href="#">Digital</a></li>
+                    <li class="nav"><a data-filter=".branding" href="#">Branding</a></li>
+                    <li class="nav"><a data-filter=".web" href="#">Web</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 filter-content">
+                <ul class="portfolio-attractive portfolio-wrapper grid-loading grid grid-4col xxl-grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-large text-center">
+                    <li class="grid-sizer"></li>
+
+                    <li class="grid-item selected transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-130.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Tailoring</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Brochure</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-135.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Instaco</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Branding</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-232.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Violator</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Branding</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item digital transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-133.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Identity</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Poster</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web branding transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-137.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Educamp</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Packaging</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web digital transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-131.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Designs</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Graphic</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected digital transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-136.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Pixflow</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Digital</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-134.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Cropo</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Photography</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-231.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Hardstone</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Photography</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected digital transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-233.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Pixflow</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Digital</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-132.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Herbal</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Digital</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item branding transition-inner-all atropos" data-atropos data-atropos-perspective="1450">
+                        <div class="position-relative">
+                            <a href="demo-interactive-portfolio-single-project-modern.html" class="portfolio-link"></a>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner" data-atropos-offset="3">
+                                        <div class="portfolio-box bg-gradient-sky-blue-pink">
+                                            <div class="portfolio-image">
+                                                <img src="images/portfolio-234.jpg" alt />
+                                            </div>
+                                            <div class="portfolio-hover justify-content-end align-items-center d-flex flex-column pt-40px pb-40px sm-pt-30px sm-pb-30px">
+                                                <span class="icon-box z-index-1 mb-auto ms-auto me-30px"><i class="bi bi-arrow-up-right icon-very-medium text-white" aria-hidden="true"></i></span>
+                                                <div class="text-white fs-19 move-top-bottom-self"><span>Educamp</span></div>
+                                                <div class="fs-15 lh-22 text-white opacity-6 move-bottom-top-self"><span>Packaging</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer-demo bg-dark-slate-blue pb-4 sm-pb-50px" style="background-image: url(images/demo-footer-pattern.svg)">
+    <div class="container">
+        <div class="row mb-6 md-mb-30px">
+            <div class="col-xl-5 col-lg-6 md-mb-30px text-center text-lg-start">
+                <h3 class="text-white fw-600 alt-font mb-40px ls-minus-1px md-mb-30px md-w-60 sm-w-70 xs-w-100 md-mx-auto">Craft a standout website with Socialista.</h3>
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6 xs-mb-20px">
+                        <span class="alt-font fs-14 fw-600 text-uppercase d-block text-white ls-1px lh-18">Presale questions</span>
+                        <a href="cdn-cgi/l/email-protection.html#aac3c4ccc5eadec2cfc7cfd0cbcb84c9c5c7"><span class="__cf_email__" data-cfemail="3f565159507f4b575a525a455e5e115c5052">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="col-lg-5 col-sm-6">
+                        <span class="alt-font fs-14 fw-600 text-uppercase d-block text-white ls-1px lh-18">Getting started</span>
+                        <a href="https://1.envato.market/R53mL2" target="_blank">Purchase on Envato</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 offset-xl-1 text-center text-lg-start">
+                <span class="alt-font fs-14 fw-600 text-uppercase text-white ls-1px d-block mb-5px">Useful links</span>
+                <ul>
+                    <li><a href="documentation/index.html" target="_blank">Documentation</a></li>
+                    <li><a href="https://www.themezaa.com/support/" target="_blank">Support center</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCxIgqIkSGVVqEsm-HE-tadQ/" target="_blank">Video tutorials</a></li>
+                    <li><a href="https://themeforest.net/user/themezaa/portfolio" target="_blank">Envato portfolio</a></li>
+                    <li><a href="https://www.themezaa.com/theme-customization/" target="_blank">Customization</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-6 text-center text-lg-start">
+                <span class="alt-font fs-14 fw-600 text-uppercase text-white ls-1px d-block mb-5px">Follow Us</span>
+                <ul>
+                    <li><a href="https://www.facebook.com/themezaastudio/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com/themezaa" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.dribbble.com/linksture" target="_blank">Dribbble</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCxIgqIkSGVVqEsm-HE-tadQ/" target="_blank">Youtube</a></li>
+                    <li><a href="https://www.linkedin.com/company/themezaa/" target="_blank">Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 order-first order-lg-4 text-center text-lg-start md-mb-20px">
+                <a href="index.html" class="footer-logo"><img src="images/logo-white-demo.png" data-at2x="images/logo-white-demo@2x.png" alt></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 last-paragraph-no-margin text-center text-lg-start">
+                <p class="fs-13 lh-22 w-90 md-w-100">ThemeZaa - The best WordPress, Shopify and Magento themes and plugins provider. We design and develop quality themes and plugins to create your awesome website.</p>
+            </div>
+            <div class="col-lg-5 text-center text-lg-end md-mt-15px last-paragraph-no-margin">
+                <p class="fs-13 lh-22">&copy; 2024 Socialista is Powered by <a href="#" class="text-decoration-line-bottom text-white">Dev Team</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/vendors.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

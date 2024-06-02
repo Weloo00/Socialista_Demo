@@ -1,1 +1,924 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131}button,html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}@media (prefers-color-scheme:dark){body{background-color:#222;color:#d9d9d9}body a{color:#fff}body a:hover{color:#ee730a;text-decoration:underline}body .lds-ring div{border-color:#999 transparent transparent}body .font-red{color:#b20f03}body .big-button,body .pow-button{background-color:#4693ff;color:#1d1d1d}body #challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=)}body #challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+)}}body{display:flex;flex-direction:column;min-height:100vh}body.no-js .loading-spinner{visibility:hidden}body.no-js .challenge-running{display:none}body.dark{background-color:#222;color:#d9d9d9}body.dark a{color:#fff}body.dark a:hover{color:#ee730a;text-decoration:underline}body.dark .lds-ring div{border-color:#999 transparent transparent}body.dark .font-red{color:#b20f03}body.dark .big-button,body.dark .pow-button{background-color:#4693ff;color:#1d1d1d}body.dark #challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=)}body.dark #challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+)}body.light{background-color:transparent;color:#313131}body.light a{color:#0051c3}body.light a:hover{color:#ee730a;text-decoration:underline}body.light .lds-ring div{border-color:#595959 transparent transparent}body.light .font-red{color:#fc574a}body.light .big-button,body.light .pow-button{background-color:#003681;border-color:#003681;color:#fff}body.light #challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=)}body.light #challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+)}a{background-color:transparent;color:#0051c3;text-decoration:none;transition:color .15s ease}a:hover{color:#ee730a;text-decoration:underline}.main-content{margin:8rem auto;max-width:60rem;width:100%}.heading-favicon{height:2rem;margin-right:.5rem;width:2rem}@media (width <= 720px){.main-content{margin-top:4rem}.heading-favicon{height:1.5rem;width:1.5rem}}.footer,.main-content{padding-left:1.5rem;padding-right:1.5rem}.main-wrapper{align-items:center;display:flex;flex:1;flex-direction:column}.font-red{color:#b20f03}.spacer{margin:2rem 0}.h1{font-size:2.5rem;font-weight:500;line-height:3.75rem}.h2{font-weight:500}.core-msg,.h2{font-size:1.5rem;line-height:2.25rem}.body-text,.core-msg{font-weight:400}.body-text{font-size:1rem;line-height:1.25rem}@media (width <= 720px){.h1{font-size:1.5rem;line-height:1.75rem}.h2{font-size:1.25rem}.core-msg,.h2{line-height:1.5rem}.core-msg{font-size:1rem}}#challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+);padding-left:34px}#challenge-error-text,#challenge-success-text{background-repeat:no-repeat;background-size:contain}#challenge-success-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=);padding-left:42px}.text-center{text-align:center}.big-button{border:.063rem solid #0051c3;border-radius:.313rem;font-size:.875rem;line-height:1.313rem;padding:.375rem 1rem;transition-duration:.2s;transition-property:background-color,border-color,color;transition-timing-function:ease}.big-button:hover{cursor:pointer}.captcha-prompt:not(.hidden){display:flex}@media (width <= 720px){.captcha-prompt:not(.hidden){flex-wrap:wrap;justify-content:center}}.pow-button{background-color:#0051c3;color:#fff;margin:2rem 0}.pow-button:hover{background-color:#003681;border-color:#003681;color:#fff}.footer{font-size:.75rem;line-height:1.125rem;margin:0 auto;max-width:60rem;width:100%}.footer-inner{border-top:1px solid #d9d9d9;padding-bottom:1rem;padding-top:1rem}.clearfix:after{clear:both;content:"";display:table}.clearfix .column{float:left;padding-right:1.5rem;width:50%}.diagnostic-wrapper{margin-bottom:.5rem}.footer .ray-id{text-align:center}.footer .ray-id code{font-family:monaco,courier,monospace}.core-msg,.zone-name-title{overflow-wrap:break-word}@media (width <= 720px){.diagnostic-wrapper{display:flex;flex-wrap:wrap;justify-content:center}.clearfix:after{clear:none;content:none;display:initial;text-align:center}.column{padding-bottom:2rem}.clearfix .column{float:none;padding:0;width:auto;word-break:keep-all}.zone-name-title{margin-bottom:1rem}}.loading-spinner{height:76.391px}.lds-ring{display:inline-block;position:relative}.lds-ring,.lds-ring div{height:1.875rem;width:1.875rem}.lds-ring div{animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border:.3rem solid transparent;border-radius:50%;border-top-color:#313131;box-sizing:border-box;display:block;position:absolute}.lds-ring div:first-child{animation-delay:-.45s}.lds-ring div:nth-child(2){animation-delay:-.3s}.lds-ring div:nth-child(3){animation-delay:-.15s}@keyframes lds-ring{0%{transform:rotate(0)}to{transform:rotate(1turn)}}@media screen and (-ms-high-contrast:active),screen and (-ms-high-contrast:none){.main-wrapper,body{display:block}}.rtl .heading-favicon{margin-left:.5rem;margin-right:0}.rtl #challenge-success-text{background-position:100%;padding-left:0;padding-right:42px}.rtl #challenge-error-text{background-position:100%;padding-left:0;padding-right:34px}</style><meta http-equiv="refresh" content="375"></head><body class="no-js"><div class="main-wrapper" role="main"><div class="main-content"><noscript><div id="challenge-error-title"><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></div></noscript></div></div><script>(function(){window._cf_chl_opt={cvId: '3',cZone: "craftohtml.themezaa.com",cType: 'managed',cNounce: '89639',cRay: '878c8d3d99c316a9',cHash: '9cfb4c8854e774d',cUPMDTk: "\/portfolio-boxed-four-column.html?__cf_chl_tk=d8NKw4.VzzuKV2iCfKl74j7D.U71QqhhrtXy_CKMyKA-1713861657-0.0.1.1-1685",cFPWv: 'b',cTTimeMs: '1000',cMTimeMs: '375000',cTplV: 5,cTplB: 'cf',cK: "visitor-time",fa: "\/portfolio-boxed-four-column.html?__cf_chl_f_tk=d8NKw4.VzzuKV2iCfKl74j7D.U71QqhhrtXy_CKMyKA-1713861657-0.0.1.1-1685",md: "klFi6E3z0dw9e4Y_ZSSE3m1.VVML8pNfridcd_Wv6EM-1713861657-1.1.1.1-bNpw1ycIPt7THLuzmVUblcBe_cZDLEa_iDmwC8XNfGnn3O3IWkIPYnzyZDDgqWzVeRhNDY7mUfMD5EciVTEHIYVLIdbn2HgOdEsnI6Yn3cWoBkFGy_h2sRjZsqUxX8zUl5COOOZS7RUlH_NJB9w21HbRcX6IpZDZ0uALem16uQuM4roqrnKXObq3OJ7kBA9IiNJETfr8VMnduKOZmVKNTQOhxmyeeI1W9bj.W5NizUcjcT1Z59mKY4s0yE_5Uc7j6.M2iz9yRKKW2hXRYxtCK8yIr9OytE6v9VRZHhvCYvQsphKeOero5h__llSRK9FRvcXlYZLE.ceoDXagBlLlBZ9XjgfqpNZ_gD2jFDtM7IFQSdxM8qeZKs5RXSnpoKco1mTJR1ql7SF4TIMNekv8aMdy_FKWFdS6GAhtPOg3fpFMgH0obQe.RiexdnRZXEI43fAiWsofLihQwC35yHKVcmt.0jVG8I23NELox0G3x6pHO0MaWDWZ.GO55FPwjbp0ZokISDym6YJ_ZxTZRSRExrASlNEQT1Z6UghgB.7PiShgvbB6pkTUXOO2ouaBTu85j._SINYULahH3j9nBzv0.3MCtU7zNnuvZdytayh9oopYoMx9cDi5Ef7.8FMSAlEgPI9XC2F9Vq99oY2Ai.ylKUj.jL9LV.dujVNylbB_uZ1Ezat04RIvE9u1IfeK2n0m0cqTCBv2SuKaNeWfXeSsZ.Z4.0J9EJmzg0QEXqlonEhfkxgmGO7X7F8hnR4FtZEvI5e6CUWKQzeBRpKwyzz4_iBcPHalUrjPmTS8arVOysuZvDmVhCZknXnRUOpHO67y5dq0aAA_c1lcB6OAHrBOg4jZzxF35uaKcJGpp6i1x00KHMJ1B4W4VDa1PnhmgVmEMA7TBYpTbdp52B_zGGnQPD6nKUcp_w2RgNowqU2XOs4Yco9ML5_d.cWOQMcIBCsVrgdOcsZJhwdATFs1dy5tXEIfpJaDUFw__ylp5SaVcQT6.yqyXbwFncKArrCv021v6rZ87X9Ob2QOZbfZLxDF1hZYJiBzTpqH3mZGQ0yo.gMGgWy8kSlv3D4NCMV8JzDzHkKv8H7Vwas_QZkP3la3lPP1Vz23hbty3CDjBpxQzZFaVQSDS_BkqjJmjEJdAAzdb7i4QLgJOoCdbGW3iCV.IJ8sBi3uXqw7bV3HFEpG9ySeYc4TNcPtBR9R6D1YAQkpKYRxmlvJvXNQpQZm54QKYp9X8EhOAVYZMqFJxm0BbEppu0BJiwgPkzXV38YT2f9JTSAzAVMhEbS_OTmS0dMqV0oIrg8DZdXbvf9zcA.8uPaAQIOM3zDjtVOQOC.dpjkN3Pt2_YgHGhFUesRYD1sT5Cd1gJEYmmS.WzxPEFYMVNZKK_LkWu4vChAfnzk0OU0ikL8DN9RaBBMqFbifuQQjdMvjtmbv.eOeSk6aCdNXfmGVeBobWuAKJHhI9X7nZ_ChE3oSup1RHSI6UC3GmU37R7rr1bWZ7BeuJ9vwN46sbKqBCIZfUBVCAo6E2jOSTkc.sVIW3VA2shdC4qwC9t8.ge00YsaMOHYNneRDZfVY3Ic3pQHR.AgvF_QKjTZStoZott5aMI5C3ckz7R4uqDOTfw",mdrd: "yf60LhYT1v4YIFmabQnGaiNJ1RSRESbTRF846ywyEbk-1713861657-1.1.1.1-.Rg51NhB547k1gEREAaVJH11kRiVSqCIa3tks9rs87KN0PLfquPv6_HVWjlBg7UOhqK6NmyfTsQvtEJOsU2m4SHV89Ae63HXAFGq8LF94ifxYpvYesGFDq2np9dq5ReAplYuMPt8GYcBf.4sg38CKfRFgUo1nKoBc.kpTpCnk3NVeIjxX8jkB_R00DIwlqfoekuLgAiJxdXCouf7GDlmZngYn4FD53mAij43kXp4yLcvsKtXESC32IAFRAHBnwoJKuTx_MGebpOag4OjdWkjImHzgKnlQvRPeeW0eaqgmc7TImZIgj4cxuqy_bQswHMxrilXnx1t5BfeRltxqq4rKiOsJ53hTFffTpCXPq5ZrRAxeeur6Hwb_cfgdTGPJmWCHKVenyqI79dkmtdDRpYv7Hcya9gStoFavokYcsJwp90ccLM9qpCmZWji.u_sYo7iB6LUTlo4_IzPyIk2re6vBJxczHGTECPN9PDW87KtVRRjNEQLtvQ2lg0fzZUMSf368Beckp1glvukRU12IIzkBxzmZEsoLyalFyA5DW9gDsND5M2rpGDqpKTe5bX01Q2VRVAfc2SCos3tpZo1qxyJPYplRElHbGmMQTLrFndIf52jpCQr18r3vqKk2EeYV0TO.NhSI4QmSQtwrspnUdDpxeeC9IQF_9UIIqXcPjjzSKBHXKs.EVaONnhNEGxWXFc4PGEvDmWCIUu2JuYbxL0aPzUF.SJx5d7d3YoYdZW9KITmZGbPDAvEF16QLiQLrYwcmvXpT78cvRsiuXXPE7DHXh_VHG2a1oXs.VpIDz8_KeY_F_FVZ4yEdm9HqsCwZqBzuTp3NnNM_010tV42gIorVctirjCm0Pl0kBxCfoC6CHm_K0GlHjI7bPG.rjr_sZY0ecPak59xe5pefHo_HzLmfsCxsbdHKVtAKNwNBLf4e4KZ2VVKvbsy1V72dovHYmL4AYf34V4kI6jEYcHXCukAuqA.CJW8MNwMtud78_E1K8UVHoBwxCrToWXJOCcsu9RFNDfeCWvWJlHfwjDJWGp6wfHPaZTHnjO.VbpzAlAUEOASQcMJuqT_f7gmXyb_KmuEosXDT5eFY4AlheeOqmGjcexdhjnE6HDCZDy0TB4lqlwJrU3XEVRrZS3Yv45nNeGTZAcE01z_1YSbRUOi57f.lG.YD_70PoV9HpMfj_x6rRPxmIZ8ms34H4svoxa8quqSIzbKGVWt4bPOmNg9pZzu9uhukOMCoc8GF4SPQdrrbU_Pn7dumk4dM1osXv0pyWHWz6ot4eyvyXi63MXMOZ4J8ueQH0lp3KlzXEqx3D9wfzK63NbLDp3sbNqfNwAzh1ImmMkHoaLq.c6HwwqT1fkvo1GLP6fM6TiFYxdLfqSMLidK4geoUOEvtwKeZpMNblRktwfmcsSbKDxLemwPPJ5FFoWYOsvynOy_VpHIDKGjbk55Fva4TZobphlYzykeQ7dFif5f8dcjoPnt8CfiklA53CeIYkOnn8hR1rxRI5rOaPIyWa509RqD5i.yIHuxSZqGGOk4KPxC3hxUU6z2TwjnY0.98yVStHxRcrfUn.GDRx9ek9Cs.5ah8TA4u3ZQEpib.VFlFH2NgjZeNQAdIEnmpXzdhIzaJVs6a4EnQa97.CIcB5u5x3uwewDW8bQ356nD20xTpiWwyTxprxstym1M1VRD1r4r_yYrfUuvOKiJ8nzrj_qmIAp31QTOHGYOMRVri6yQ_o57LPuYw.GC17EQtjhkSGMGWSw7VBh69zdP3.cFnRZ6EDAOdskskp57A.mCVcusGSdQkEP0iiqkgrtY49PFEF.cRKfZyx8U2dsmO0O0F8xVAKwCXfa95kVdtTR02pLDaXKMp1WNj8rHaAlm3n9VjhPKZlS_nz6Fe5oNFqhwVvEARyqPBMaJXG_.pJUBApGHnAF2FDdkPeOEHfKL.4HCy4OWYB.herJkSqD6znuevKQ33hbp3aSSqSsDwKT1",cRq: {ru: 'aHR0cHM6Ly9jcmFmdG9odG1sLnRoZW1lemFhLmNvbS9wb3J0Zm9saW8tYm94ZWQtZm91ci1jb2x1bW4uaHRtbA==',ra: 'TW96aWxsYS80LjUgKGNvbXBhdGlibGU7IEhUVHJhY2sgMy4weDsgV2luZG93cyA5OCk=',rm: 'R0VU',d: 'v0zDfkRYsSg9XOQqrGFtedxybEeSeXODhK/AlJtZuwIGOyCoZYovxlXjOzcM+xet6HdeCXveUhJlizgGr3qXgL9QKxCuZjOYNRPWkgkIJ4PjTYhkds6Ba4Gselju91yTByP3z4IQXE2h1YuMcJqpi2QE/ExxfkxFz7FdmY8ige2j+CCrimazFiSqUZwoZZv7Xlq9j0opnrwWvCGuFVtHQgUCAdmCI6GD5qhqQLZrEuVUZLSI/XJsdfOXuZKWENGsSVWn05DnIRiieqIC18Kj4d9txxGPLnH6KBZVICRYTikAn5HqpmGHM9Zdzed3AD6gvMusD0mAPwPpyK7QaV+H7uReXcXCHiRyF2Me4Xnjia90SMWGTVknQdybFefW2znG8K0UlJvXME4YTL9K9stExa2KGF24gbp7nA7gjxnT+OmMJ7SXMQE5HJZu3suj55kh/vYd/T0/J1elQoaWFkQqoLpYuES3Z+bU/TH40Jj0nEVbb5gzfPgKD38noeeM7uIzCP7TXKSBN9Q6txQktMj9snHwBEoz94xBwdmVigQ5hl/MuxU2LTo4hCRKBMBc4U45yWLd0h3/qTHxwwFV+a1TIWbn+HWE2kM8Kn/rROY7HbE=',t: 'MTcxMzg2MTY1Ny4yMjcwMDA=',cT: Math.floor(Date.now() / 1000),m: 'r5EM65psoEh6IvNeHb53Aom4LAFwburXbH/lCXugT2o=',i1: 'ttSO7M1iZDVlHBX827GCfg==',i2: 'AxhEoKdORBr00NOTMVu6wQ==',zh: 'I6MnMZeTTI1mZTZ6F/nNx1Bgs9GwmnZOBj9gowj/Juk=',uh: '9nhh8pPb15w9F3Prh3/JVoxGAtQI3Uvfk+klfHhR5+g=',hh: '2iX7p45avrZToViy6O9g4uk1pUu6QBAf2mNMTzABnyA=',}};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=878c8d3d99c316a9';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, "\/portfolio-boxed-four-column.html?__cf_chl_rt_tk=d8NKw4.VzzuKV2iCfKl74j7D.U71QqhhrtXy_CKMyKA-1713861657-0.0.1.1-1685" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script></body></html>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Socialista - The Multipurpose HTML5 Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="ThemeZaa">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Elevate your online presence with Socialista - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/responsive.min.css" />
+</head>
+<body data-mobile-nav-style="classic">
+
+<header>
+
+    <nav class="navbar navbar-expand-lg header-light header-reverse header-demo" data-header-hover="light">
+        <div class="container-fluid">
+            <div class="col-auto col-lg-2 me-lg-0 me-auto">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt class="default-logo">
+                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt class="alt-logo">
+                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt class="mobile-logo">
+                </a>
+            </div>
+            <div class="col-auto col-lg-8 menu-order position-static">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Pre-Built Sites</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content background-position-center cover-background" aria-labelledby="navbarDropdownMenuLink1" style="background-image: url(images/pre-built-sites-bg.jpg)">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li><a href="demo-corporate.html" target="_blank">Corporate<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">Trendy</span></a></li>
+                                        <li><a href="demo-marketing.html" target="_blank">Marketing</a></li>
+                                        <li><a href="demo-accounting.html" target="_blank">Accounting<span class="label bg-light-red text-red border-radius-26px">Classic</span></a></li>
+                                        <li><a href="demo-beauty-salon.html" target="_blank">Beauty Salon</a></li>
+                                        <li><a href="demo-architecture.html" target="_blank">Architecture</a></li>
+                                        <li><a href="demo-ebook.html" target="_blank">eBook</a></li>
+                                        <li><a href="demo-seo-agency.html" target="_blank">SEO Agency</a></li>
+                                        <li><a href="demo-hosting.html" target="_blank">Hosting</a></li>
+                                        <li><a href="demo-consulting.html" target="_blank">Consulting</a></li>
+                                        <li><a href="demo-business.html" target="_blank">Business</a></li>
+                                        <li><a href="demo-interactive-portfolio.html" target="_blank">Interactive Portfolio</a></li>
+                                        <li><a href="demo-spa-salon.html" target="_blank">Spa Salon<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Clean</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-branding-agency.html" target="_blank">Branding Agency<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-elearning.html" target="_blank">eLearning</a></li>
+                                        <li><a href="demo-it-business.html" target="_blank">IT Business<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Modern</span></a></li>
+                                        <li><a href="demo-barber.html" target="_blank">Barber</a></li>
+                                        <li><a href="demo-hotel-and-resort.html" target="_blank">Hotel & Resort</a></li>
+                                        <li><a href="demo-real-estate.html" target="_blank">Real Estate</a></li>
+                                        <li><a href="demo-jewellery-store.html" target="_blank">Jewellery Store</a></li>
+                                        <li><a href="demo-travel-agency.html" target="_blank">Travel Agency</a></li>
+                                        <li><a href="demo-gym-and-fitness.html" target="_blank">Gym & Fitness</a></li>
+                                        <li><a href="demo-design-agency.html" target="_blank">Design Agency<span class="label bg-light-red text-red border-radius-26px">Creative</span></a></li>
+                                        <li><a href="demo-photography.html" target="_blank">Photography</a></li>
+                                        <li><a href="demo-pizza-parlor.html" target="_blank">Pizza Parlor</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-restaurant.html" target="_blank">Restaurant<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-scattered-portfolio.html" target="_blank">Scattered Portfolio</a></li>
+                                        <li><a href="demo-data-analysis.html" target="_blank">Data Analysis</a></li>
+                                        <li><a href="demo-medical.html" target="_blank">Medical</a></li>
+                                        <li><a href="demo-horizontal-portfolio.html" target="_blank">Horizontal Portfolio</a></li>
+                                        <li><a href="demo-product-showcase.html" target="_blank">Product Showcase<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">Trendy</span></a></li>
+                                        <li><a href="demo-finance.html" target="_blank">Finance</a></li>
+                                        <li><a href="demo-fashion-store.html" target="_blank">Fashion Store</a></li>
+                                        <li><a href="demo-music-onepage.html" target="_blank">Music</a></li>
+                                        <li><a href="demo-vertical-portfolio.html" target="_blank">Vertical Portfolio</a></li>
+                                        <li><a href="demo-freelancer.html" target="_blank">Freelancer<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Clean</span></a></li>
+                                        <li><a href="demo-charity.html" target="_blank">Charity</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-digital-agency.html" target="_blank">Digital Agency</a></li>
+                                        <li><a href="demo-web-agency.html" target="_blank">Web Agency<span class="label bg-white-ice text-jade border-radius-26px">Creative</span></a></li>
+                                        <li><a href="demo-yoga-and-meditation.html" target="_blank">Yoga & Meditation</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Startup</a></li>
+                                        <li><a href="demo-application.html" target="_blank">Application<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-lawyer.html" target="_blank">Lawyer</a></li>
+                                        <li><a href="demo-conference.html" target="_blank">Conference</a></li>
+                                        <li><a href="demo-minimal-portfolio.html" target="_blank">Minimal Portfolio<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-decor-store.html" target="_blank">Decor Store</a></li>
+                                        <li><a href="demo-magazine.html" target="_blank">Magazine</a></li>
+                                        <li><a href="demo-blogger.html" target="_blank">Blogger</a></li>
+                                        <li><a href="demo-wedding-invitation.html" target="_blank">Wedding Invitation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Pages</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li class="sub-title">About Pages</li>
+                                        <li><a href="demo-branding-agency-about.html" target="_blank">About - Branding<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-restaurant-about.html" target="_blank">About - Restaurant</a></li>
+                                        <li><a href="demo-minimal-portfolio-about.html" target="_blank">About - Minimal</a></li>
+                                        <li><a href="demo-accounting-company.html" target="_blank">About - Accounting</a></li>
+                                        <li><a href="demo-architecture-about.html" target="_blank">About - Architecture</a></li>
+                                        <li><a href="demo-digital-agency-about.html" target="_blank">About - Digital</a></li>
+                                        <li><a href="demo-photography-about.html" target="_blank">About - Photography</a></li>
+                                        <li><a href="demo-design-agency-about.html" target="_blank">About - Agency</a></li>
+                                        <li><a href="demo-marketing-about.html" target="_blank">About - Marketing<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-scattered-portfolio-about.html" target="_blank">About - Scattered</a></li>
+                                        <li><a href="demo-medical-about.html" target="_blank">About - Medical</a></li>
+                                        <li><a href="demo-web-agency-about.html" target="_blank">About - Web<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-startup-who-we-are.html" target="_blank">About - Startup</a></li>
+                                        <li><a href="demo-hotel-and-resort-about-us.html" target="_blank">About - Hotel</a></li>
+                                        <li><a href="demo-elearning-about.html" target="_blank">About - eLearning<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Services Pages</li>
+                                        <li><a href="demo-accounting-services.html" target="_blank">Services - Accounting</a></li>
+                                        <li><a href="demo-marketing-services.html" target="_blank">Services - Marketing</a></li>
+                                        <li><a href="demo-branding-agency-services.html" target="_blank">Services - Branding<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-minimal-portfolio-expertise.html" target="_blank">Services - Minimal</a></li>
+                                        <li><a href="demo-web-agency-expertise.html" target="_blank">Services - Web</a></li>
+                                        <li><a href="demo-architecture-services.html" target="_blank">Services - Architecture</a></li>
+                                        <li><a href="demo-digital-agency-expertise.html" target="_blank">Services - Digital</a></li>
+                                        <li><a href="demo-startup-services.html" target="_blank">Services - Startup</a></li>
+                                        <li><a href="demo-scattered-portfolio-expertise.html" target="_blank">Services - Scattered</a></li>
+                                        <li><a href="demo-lawyer-practice-areas.html" target="_blank">Services - Lawyer</a></li>
+                                        <li><a href="demo-corporate-services.html" target="_blank">Services - Corporate<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-data-analysis-what-we-do.html" target="_blank">Services - Data Analysis</a></li>
+                                        <li><a href="demo-marketing-services-details.html" target="_blank">Single – Marketing</a></li>
+                                        <li><a href="demo-accounting-services-details.html" target="_blank">Single – Accounting</a></li>
+                                        <li><a href="demo-branding-agency-services-detail.html" target="_blank">Single - Branding<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Contact Pages</li>
+                                        <li><a href="demo-scattered-portfolio-contact.html" target="_blank">Contact - Scattered</a></li>
+                                        <li><a href="demo-branding-agency-contact.html" target="_blank">Contact - Branding<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-photography-contact.html" target="_blank">Contact - Photography</a></li>
+                                        <li><a href="demo-hotel-and-resort-contact.html" target="_blank">Contact - Hotel</a></li>
+                                        <li><a href="demo-spa-salon-contact.html" target="_blank">Contact - Spa</a></li>
+                                        <li><a href="demo-it-business-contact.html" target="_blank">Contact - IT Business<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-architecture-contact.html" target="_blank">Contact - Architecture</a></li>
+                                        <li><a href="demo-design-agency-contact.html" target="_blank">Contact - Agency</a></li>
+                                        <li><a href="demo-marketing-contact.html" target="_blank">Contact - Marketing</a></li>
+                                        <li><a href="demo-horizontal-portfolio-contact.html" target="_blank">Contact - Portfolio</a></li>
+                                        <li><a href="demo-accounting-contact.html" target="_blank">Contact - Accounting</a></li>
+                                        <li><a href="demo-elearning-contact.html" target="_blank">Contact - eLearning</a></li>
+                                        <li><a href="demo-corporate-contact.html" target="_blank">Contact - Corporate</a></li>
+                                        <li><a href="demo-real-estate-contact.html" target="_blank">Contact - Real Estate</a></li>
+                                        <li><a href="demo-web-agency-contact.html" target="_blank">Contact - Web</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Other Pages</li>
+                                        <li><a href="demo-corporate-pricing.html" target="_blank">Pricing - Corporate</a></li>
+                                        <li><a href="demo-hosting-pricing.html" target="_blank">Pricing - Hosting</a></li>
+                                        <li><a href="demo-data-analysis-pricing.html" target="_blank">Pricing - Data Analysis</a></li>
+                                        <li><a href="demo-marketing-pricing.html" target="_blank">Pricing - Marketing<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-consulting-process.html" target="_blank">Process - Consulting</a></li>
+                                        <li><a href="demo-accounting-process.html" target="_blank">Process - Accounting</a></li>
+                                        <li><a href="demo-startup-clients.html" target="_blank">Clients - Startup</a></li>
+                                        <li><a href="demo-business-clients.html" target="_blank">Clients - Business</a></li>
+                                        <li><a href="demo-corporate-customer-stories.html" target="_blank">Testimonials - Corporate</a></li>
+                                        <li><a href="demo-data-analysis-testimonials.html" target="_blank">Reviews - Data Analysis</a></li>
+                                        <li><a href="demo-finance-team.html" target="_blank">Team - Finance</a></li>
+                                        <li><a href="demo-marketing-team.html" target="_blank">Team - Marketing</a></li>
+                                        <li><a href="demo-web-agency-people.html" target="_blank">Team - Web<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-restaurant-chefs.html" target="_blank">Chefs - Restaurant</a></li>
+                                        <li><a href="demo-pizza-parlor-chefs.html" target="_blank">Chefs - Pizza Parlor</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Other Pages</li>
+                                        <li><a href="demo-real-estate-agents.html" target="_blank">Agents - Real Estate</a></li>
+                                        <li><a href="demo-elearning-instructors.html" target="_blank">Instructors - eLearning</a></li>
+                                        <li><a href="demo-hotel-and-resort-amenities.html" target="_blank">Amenities - Hotel</a></li>
+                                        <li><a href="demo-medical-timetable.html" target="_blank">Timetable - Medical</a></li>
+                                        <li><a href="demo-photography-award.html" target="_blank">Award - Photography</a></li>
+                                        <li><a href="demo-decor-store-faq.html" target="_blank">FAQ - Decor Store</a></li>
+                                        <li><a href="demo-charity-causes.html" target="_blank">Causes - Charity</a></li>
+                                        <li><a href="demo-restaurant-menu.html" target="_blank">Menu - Restaurant</a></li>
+                                        <li><a href="demo-hotel-and-resort-bistro.html" target="_blank">Menu - Hotel<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-pizza-parlor-menu.html" target="_blank">Menu - Pizza</a></li>
+                                        <li><a href="demo-application-features.html" target="_blank">Features - Application</a></li>
+                                        <li><a href="404.html">Error 404</a></li>
+                                        <li><a href="search-result.html">Search Results</a></li>
+                                        <li><a href="maintenance.html">Maintenance</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="javascript:void(0);" class="nav-link">Portfolio</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Classic<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-classic-two-column.html">Classic 2 Column</a></li>
+                                        <li><a href="portfolio-classic-three-column.html">Classic 3 Column</a></li>
+                                        <li><a href="portfolio-classic-four-column.html">Classic 4 Column</a></li>
+                                        <li><a href="portfolio-classic-masonry.html">Classic Masonry</a></li>
+                                        <li><a href="portfolio-classic-metro.html">Classic Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Boxed<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-boxed-two-column.html">Boxed 2 Column</a></li>
+                                        <li><a href="portfolio-boxed-three-column.html">Boxed 3 Column</a></li>
+                                        <li><a href="portfolio-boxed-four-column.html">Boxed 4 Column</a></li>
+                                        <li><a href="portfolio-boxed-masonry.html">Boxed Masonry</a></li>
+                                        <li><a href="portfolio-boxed-metro.html">Boxed Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Transform<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-transform-two-column.html">Transform 2 Column</a></li>
+                                        <li><a href="portfolio-transform-three-column.html">Transform 3 Column</a></li>
+                                        <li><a href="portfolio-transform-four-column.html">Transform 4 Column</a></li>
+                                        <li><a href="portfolio-transform-masonry.html">Transform Masonry</a></li>
+                                        <li><a href="portfolio-transform-metro.html">Transform Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Creative<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-creative-two-column.html">Creative 2 Column</a></li>
+                                        <li><a href="portfolio-creative-three-column.html">Creative 3 Column</a></li>
+                                        <li><a href="portfolio-creative-four-column.html">Creative 4 Column</a></li>
+                                        <li><a href="portfolio-creative-masonry.html">Creative Masonry</a></li>
+                                        <li><a href="portfolio-creative-metro.html">Creative Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Attractive<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-attractive-two-column.html">Attractive 2 Column</a></li>
+                                        <li><a href="portfolio-attractive-three-column.html">Attractive 3 Column</a></li>
+                                        <li><a href="portfolio-attractive-four-column.html">Attractive 4 Column</a></li>
+                                        <li><a href="portfolio-attractive-masonry.html">Attractive Masonry</a></li>
+                                        <li><a href="portfolio-attractive-metro.html">Attractive Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Clean<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-clean-two-column.html">Clean 2 Column</a></li>
+                                        <li><a href="portfolio-clean-three-column.html">Clean 3 Column</a></li>
+                                        <li><a href="portfolio-clean-four-column.html">Clean 4 Column</a></li>
+                                        <li><a href="portfolio-clean-masonry.html">Clean Masonry</a></li>
+                                        <li><a href="portfolio-clean-metro.html">Clean Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Simple<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-simple-two-column.html">Simple 2 Column</a></li>
+                                        <li><a href="portfolio-simple-three-column.html">Simple 3 Column</a></li>
+                                        <li><a href="portfolio-simple-four-column.html">Simple 4 Column</a></li>
+                                        <li><a href="portfolio-simple-masonry.html">Simple Masonry</a></li>
+                                        <li><a href="portfolio-simple-metro.html">Simple Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Modern<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-modern-two-column.html">Modern 2 Column</a></li>
+                                        <li><a href="portfolio-modern-three-column.html">Modern 3 Column</a></li>
+                                        <li><a href="portfolio-modern-four-column.html">Modern 4 Column</a></li>
+                                        <li><a href="portfolio-modern-masonry.html">Modern Masonry</a></li>
+                                        <li><a href="portfolio-modern-metro.html">Modern Metro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Portfolio Other<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="portfolio-slider.html">Portfolio Slider</a></li>
+                                        <li><a href="portfolio-parallax.html">Portfolio Parallax</a></li>
+                                        <li><a href="portfolio-justified-gallery.html">Justified Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Single Project<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-digital-agency-single-project-minimal.html" target="_blank">Single - Minimal</a></li>
+                                        <li><a href="demo-branding-agency-single-project-slider.html" target="_blank">Single - Slider</a></li>
+                                        <li><a href="demo-architecture-single-project-gallery.html" target="_blank">Single - Gallery</a></li>
+                                        <li><a href="demo-interactive-portfolio-single-project-modern.html" target="_blank">Single - Modern</a></li>
+                                        <li><a href="demo-design-agency-single-project-simple.html" target="_blank">Single - Simple</a></li>
+                                        <li><a href="demo-web-agency-single-project-creative.html" target="_blank">Single - Creative</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Elements</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink4">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li><a href="element-accordion.html">Accordion</a></li>
+                                        <li><a href="element-buttons.html">Button</a></li>
+                                        <li><a href="element-team.html">Team</a></li>
+                                        <li><a href="element-testimonials.html">Testimonials<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="element-clients.html">Clients</a></li>
+                                        <li><a href="element-review.html">Review</a></li>
+                                        <li><a href="element-subscribe.html">Subscribe</a></li>
+                                        <li><a href="element-call-to-action.html">Call to Action</a></li>
+                                        <li><a href="element-tab.html">Tab<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="element-google-map.html">Google Map<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="element-contact-form.html">Contact Form</a></li>
+                                        <li><a href="element-columns.html">Columns</a></li>
+                                        <li><a href="element-alert-boxes.html">Alert Boxes</a></li>
+                                        <li><a href="element-image-gallery.html">Image Gallery</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="element-progress-bar.html">Progress Bar</a></li>
+                                        <li><a href="element-process-step.html">Process Step<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="element-icon-with-text.html">Icon with Text<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="element-shape-dividers.html">Shape Dividers</a></li>
+                                        <li><a href="element-counters.html">Counters</a></li>
+                                        <li><a href="element-countdown.html">Countdown</a></li>
+                                        <li><a href="element-fancy-text-box.html">Fancy Text Box</a></li>
+                                        <li><a href="element-heading.html">Heading</a></li>
+                                        <li><a href="element-dropcaps.html">Dropcaps</a></li>
+                                        <li><a href="element-blockquote.html">Blockquote</a></li>
+                                        <li><a href="element-highlights.html">Highlights</a></li>
+                                        <li><a href="element-lists.html">Lists</a></li>
+                                        <li><a href="element-social-icons.html">Social Icons</a></li>
+                                        <li><a href="element-pricing-table.html">Pricing Table</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="element-interactive-banners.html">Interactive Banners</a></li>
+                                        <li><a href="element-services-box.html">Services Box</a></li>
+                                        <li><a href="element-rotate-box.html">Rotate Box<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="element-instagram.html">Instagram</a></li>
+                                        <li><a href="element-parallax-scrolling.html">Parallax Scrolling</a></li>
+                                        <li><a href="element-sliding-box.html">Sliding Box<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="element-content-carousel.html">Content Carousel</a></li>
+                                        <li><a href="element-media.html">Media</a></li>
+                                        <li><a href="element-event.html">Event</a></li>
+                                        <li><a href="element-dividers.html">Dividers</a></li>
+                                        <li><a href="element-horizontal-list-item.html">Horizontal List Item</a></li>
+                                        <li><a href="element-banners.html">Banners</a></li>
+                                        <li><a href="element-carousel.html">Carousel</a></li>
+                                        <li><a href="element-tilt-effect.html">Tilt Effect<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                    </ul>
+                                    <ul class="col premium-element cover-background" style="background-image: url(images/premium-elements-bg.jpg)">
+                                        <li class="sub-title">Premium Elements</li>
+                                        <li><a href="element-adaptive-backgrounds.html">Adaptive Backgrounds</a></li>
+                                        <li><a href="element-sticky-column.html">Sticky Column</a></li>
+                                        <li><a href="element-3d-parallax-hover.html">3D Parallax Hover</a></li>
+                                        <li><a href="demo-restaurant.html" target="_blank">Custom Cursor</a></li>
+                                        <li><a href="element-animated-particles.html">Animated Particles</a></li>
+                                        <li><a href="element-marquee.html">Marquee</a></li>
+                                        <li><a href="element-fancy-heading.html">Fancy Heading</a></li>
+                                        <li><a href="element-fancy-images.html">Fancy Images</a></li>
+                                        <li><a href="element-scrolling-effects.html">Scrolling Effects</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="javascript:void(0);" class="nav-link">Features</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Header<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-business.html" target="_blank">Transparent Header</a></li>
+                                        <li><a href="demo-corporate.html" target="_blank">White Header</a></li>
+                                        <li><a href="header-dark.html" target="_blank">Dark Header</a></li>
+                                        <li><a href="demo-digital-agency.html" target="_blank">Left Navigation</a></li>
+                                        <li><a href="demo-branding-agency.html" target="_blank">Right Navigation</a></li>
+                                        <li><a href="demo-restaurant.html" target="_blank">Center Navigation</a></li>
+                                        <li><a href="demo-data-analysis.html" target="_blank">Header with Top Bar</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Header with Push</a></li>
+                                        <li><a href="demo-pizza-parlor.html" target="_blank">Center Logo</a></li>
+                                        <li><a href="header-top-logo.html" target="_blank">Top Logo</a></li>
+                                        <li><a href="demo-ebook.html" target="_blank">One Page Navigation</a></li>
+                                        <li><a href="header-mini.html" target="_blank">Mini Header</a></li>
+                                        <li><a href="demo-seo-agency.html" target="_blank">Header with Button</a></li>
+                                        <li><a href="demo-marketing.html" target="_blank">Header with Social</a></li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Left Menu<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="header-left-menu-simple.html" target="_blank">Left Menu Simple</a></li>
+                                                <li><a href="demo-minimal-portfolio.html" target="_blank">Left Menu Modern</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Hamburger Menu<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="demo-photography.html" target="_blank">Hamburger Simple</a></li>
+                                                <li><a href="demo-architecture.html" target="_blank">Hamburger Creative</a></li>
+                                                <li><a href="demo-freelancer.html" target="_blank">Hamburger Clean</a></li>
+                                                <li><a href="demo-gym-and-fitness.html" target="_blank">Hamburger Modern</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Header Type<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="header-always-fixed.html" target="_blank">Always Fixed</a></li>
+                                                <li><a href="demo-application.html" target="_blank">Disable Fixed</a></li>
+                                                <li><a href="demo-seo-agency.html" target="_blank">Reverse Header</a></li>
+                                                <li><a href="demo-accounting.html" target="_blank">Responsive Sticky</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);">Mobile Menu<i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="demo-startup.html" target="_blank">Classic</a></li>
+                                                <li><a href="demo-yoga-and-meditation.html" target="_blank">Modern</a></li>
+                                                <li><a href="demo-scattered-portfolio.html" target="_blank">Full Screen</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Lightbox & Modal<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="modal-simple.html">Simple Modal</a></li>
+                                        <li><a href="modal-subscription.html">Subscription</a></li>
+                                        <li><a href="modal-contact-form.html">Contact Form</a></li>
+                                        <li><a href="modal-youtube-video.html">Youtube Video</a></li>
+                                        <li><a href="modal-vimeo-video.html">Vimeo Video</a></li>
+                                        <li><a href="modal-google-map.html">Google Map</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Icon Packs<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="icon-packs-icons-mind-line.html">Icons Mind Line</a></li>
+                                        <li><a href="icon-packs-feather.html">Feather</a></li>
+                                        <li><a href="icon-packs-font-awesome.html">Font Awesome</a></li>
+                                        <li><a href="icon-packs-themify.html">Themify</a></li>
+                                        <li><a href="icon-packs-bootstrap.html">Bootstrap</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Sliders<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-architecture.html" target="_blank">Revolution</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Swiper</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="animations.html">Animations</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-minimal-portfolio.html" target="_blank">Page Preloader</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-jewellery-store.html" target="_blank">Cookie Notify</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-startup.html" target="_blank">Back to Top</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="demo-design-agency.html" target="_blank">Sticky Footer</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="javascript:void(0);" class="nav-link">Blog</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink6" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink6">
+                                <li class="dropdown"><a href="blog-grid.html">Blog Grid</a></li>
+                                <li class="dropdown"><a href="blog-classic.html">Blog Classic</a></li>
+                                <li class="dropdown"><a href="blog-metro.html">Blog Metro</a></li>
+                                <li class="dropdown"><a href="blog-masonry.html">Blog Masonry</a></li>
+                                <li class="dropdown"><a href="blog-simple.html">Blog Simple</a></li>
+                                <li class="dropdown"><a href="blog-date.html">Blog Date</a></li>
+                                <li class="dropdown"><a href="blog-only-text.html">Blog Only Text</a></li>
+                                <li class="dropdown"><a href="blog-side-image.html">Blog Side Image</a></li>
+                                <li class="dropdown"><a href="blog-modern.html">Blog Modern</a></li>
+                                <li class="dropdown"><a href="blog-standard.html">Blog Standard</a></li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Single Post<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="demo-business-blog-single-modern.html" target="_blank">Single - Modern</a></li>
+                                        <li><a href="demo-elearning-blog-single-simple.html" target="_blank">Single - Simple</a></li>
+                                        <li><a href="demo-web-agency-blog-single-creative.html" target="_blank">Single - Creative</a></li>
+                                        <li><a href="demo-blogger-blog-single-classic.html" target="_blank">Single - Classic</a></li>
+                                        <li><a href="demo-architecture-blog-single-clean.html" target="_blank">Single - Clean</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">Post Type<i class="fa-solid fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="blog-post-type-standard.html">Post - Standard</a></li>
+                                        <li><a href="blog-post-type-gallery.html">Post - Gallery</a></li>
+                                        <li><a href="blog-post-type-slider.html">Post - Slider</a></li>
+                                        <li><a href="blog-post-type-audio.html">Post - Audio</a></li>
+                                        <li><a href="blog-post-type-video.html">Post - Video</a></li>
+                                        <li><a href="blog-post-type-blockquote.html">Post - Blockquote</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Shop</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink7" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink7">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li class="sub-title">Shop Layout</li>
+                                        <li><a href="demo-fashion-store-shop.html" target="_blank">Left Sidebar</a></li>
+                                        <li><a href="demo-fashion-store-right-sidebar.html" target="_blank">Right Sidebar</a></li>
+                                        <li><a href="demo-fashion-store-no-sidebar.html" target="_blank">No Sidebar</a></li>
+                                        <li><a href="demo-decor-store-collections.html" target="_blank">Collections - Style 01</a></li>
+                                        <li><a href="demo-jewellery-store-categories.html" target="_blank">Collections - Style 02</a></li>
+                                        <li><a href="demo-fashion-store-collection.html" target="_blank">Collections - Style 03</a></li>
+                                        <li><a href="demo-fashion-store-single-product.html" target="_blank">Single Product - Thumb Left</a></li>
+                                        <li><a href="demo-decor-store-single-product.html" target="_blank">Single Product - Thumb Bottom</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title">Utility Pages</li>
+                                        <li><a href="demo-decor-store-cart.html" target="_blank">Shopping Cart</a></li>
+                                        <li><a href="demo-decor-store-checkout.html" target="_blank">Checkout</a></li>
+                                        <li><a href="demo-decor-store-account.html" target="_blank">Login / Register</a></li>
+                                        <li><a href="demo-decor-store-faq.html" target="_blank">Help Center</a></li>
+                                        <li><a href="demo-fashion-store-wishlist.html" target="_blank">Wishlist</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title"><a href="index.html" target="_blank" class="p-0"><img src="images/banner-02.jpg" alt /></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li class="sub-title"><a href="index.html" target="_blank" class="p-0"><img src="images/banner-01.jpg" alt /></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto col-lg-2 text-end xs-pe-0">
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="https://1.envato.market/R53mL2" target="_blank" class="btn btn-dark-gray btn-small btn-switch-text btn-rounded text-transform-none btn-box-shadow purchase-envato">
+<span>
+<span class="btn-double-text" data-text="Purchase Socialista">Purchase Socialista</span>
+</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<section class="pb-0 ipad-top-space-margin md-pt-0">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
+                <div class="d-flex flex-column justify-content-center extra-very-small-screen">
+                    <h1 class="text-dark-gray alt-font ls-minus-1px fw-700 mb-20px">Portfolio boxed</h1>
+                    <h2 class="d-inline-block fw-400 ls-0px w-80 xs-w-100 mx-auto">Portfolio boxed - Four column layout</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="pt-0 ps-6 pe-6 xxl-ps-4 xxl-pe-4 lg-px-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+
+                <ul class="portfolio-filter nav nav-tabs justify-content-center border-0 fw-500 alt-font pb-5">
+                    <li class="nav active"><a data-filter="*" href="#">All</a></li>
+                    <li class="nav"><a data-filter=".selected" href="#">Selected</a></li>
+                    <li class="nav"><a data-filter=".digital" href="#">Digital</a></li>
+                    <li class="nav"><a data-filter=".branding" href="#">Branding</a></li>
+                    <li class="nav"><a data-filter=".web" href="#">Web</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 filter-content">
+                <ul class="portfolio-boxed portfolio-wrapper grid-loading grid grid-4col xxl-grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-large text-center">
+                    <li class="grid-sizer"></li>
+
+                    <li class="grid-item selected digital web transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-235.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #637c8e;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Branding</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Stream stones</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected web branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-33.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #636853;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Graphics</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Skoda corporate</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web digital transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-237.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #a17e67;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Photography</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Potato islands</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-35.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #926b6b;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Brochure</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Daimler financial</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web digital transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-37.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #a77e5a;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Packaging</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Pixflow branding</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected web branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-36.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #a2816f;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Portfolio</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Visionen book</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected web digital branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-38.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #567754;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Typography</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Crop identity</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected digital branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-34.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #42667f;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Digital</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Herbal beauty</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item web digital transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-32.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #af6e6e;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Packaging</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Cortifiel look</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-236.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #989494;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Development</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Mass movie</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected digital branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-39.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #6c8d9f;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">E-commerce</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Truenorth web</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="grid-item selected digital branding transition-inner-all">
+                        <div class="portfolio-box border-radius-4px">
+                            <div class="portfolio-image border-radius-4px">
+                                <img src="images/portfolio-238.jpg" alt />
+                                <div class="portfolio-hover d-flex justify-content-center flex-column">
+                                    <div class="portfolio-icon d-flex flex-row justify-content-center align-items-center">
+                                        <a href="demo-digital-agency-single-project-minimal.html" class="d-flex flex-column justify-content-center text-dark-gray text-dark-gray-hover rounded-circle bg-white w-60px h-60px move-bottom-top">
+                                            <i class="fa-solid fa-plus icon-small" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-overlay bg-dark-gray" style="background-color: #5a6c45;"></div>
+                            </div>
+                            <div class="portfolio-caption pt-30px pb-30px lg-pt-20px lg-pb-20px">
+                                <div class="fs-14 lh-20 text-uppercase">Branding</div>
+                                <a href="demo-digital-agency-single-project-minimal.html" class="fs-17 fw-600 text-dark-gray text-dark-gray-hover">Armchair mojo</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer-demo bg-dark-slate-blue pb-4 sm-pb-50px" style="background-image: url(images/demo-footer-pattern.svg)">
+    <div class="container">
+        <div class="row mb-6 md-mb-30px">
+            <div class="col-xl-5 col-lg-6 md-mb-30px text-center text-lg-start">
+                <h3 class="text-white fw-600 alt-font mb-40px ls-minus-1px md-mb-30px md-w-60 sm-w-70 xs-w-100 md-mx-auto">Craft a standout website with Socialista.</h3>
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6 xs-mb-20px">
+                        <span class="alt-font fs-14 fw-600 text-uppercase d-block text-white ls-1px lh-18">Presale questions</span>
+                        <a href="cdn-cgi/l/email-protection.html#4a23242c250a3e222f272f302b2b64292527"><span class="__cf_email__" data-cfemail="573e39313817233f323a322d36367934383a">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="col-lg-5 col-sm-6">
+                        <span class="alt-font fs-14 fw-600 text-uppercase d-block text-white ls-1px lh-18">Getting started</span>
+                        <a href="https://1.envato.market/R53mL2" target="_blank">Purchase on Envato</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 offset-xl-1 text-center text-lg-start">
+                <span class="alt-font fs-14 fw-600 text-uppercase text-white ls-1px d-block mb-5px">Useful links</span>
+                <ul>
+                    <li><a href="documentation/index.html" target="_blank">Documentation</a></li>
+                    <li><a href="https://www.themezaa.com/support/" target="_blank">Support center</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCxIgqIkSGVVqEsm-HE-tadQ/" target="_blank">Video tutorials</a></li>
+                    <li><a href="https://themeforest.net/user/themezaa/portfolio" target="_blank">Envato portfolio</a></li>
+                    <li><a href="https://www.themezaa.com/theme-customization/" target="_blank">Customization</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-6 text-center text-lg-start">
+                <span class="alt-font fs-14 fw-600 text-uppercase text-white ls-1px d-block mb-5px">Follow Us</span>
+                <ul>
+                    <li><a href="https://www.facebook.com/themezaastudio/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com/themezaa" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.dribbble.com/linksture" target="_blank">Dribbble</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCxIgqIkSGVVqEsm-HE-tadQ/" target="_blank">Youtube</a></li>
+                    <li><a href="https://www.linkedin.com/company/themezaa/" target="_blank">Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 order-first order-lg-4 text-center text-lg-start md-mb-20px">
+                <a href="index.html" class="footer-logo"><img src="images/logo-white-demo.png" data-at2x="images/logo-white-demo@2x.png" alt></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 last-paragraph-no-margin text-center text-lg-start">
+                <p class="fs-13 lh-22 w-90 md-w-100">ThemeZaa - The best WordPress, Shopify and Magento themes and plugins provider. We design and develop quality themes and plugins to create your awesome website.</p>
+            </div>
+            <div class="col-lg-5 text-center text-lg-end md-mt-15px last-paragraph-no-margin">
+                <p class="fs-13 lh-22">&copy; 2024 Socialista is Powered by <a href="#"  class="text-decoration-line-bottom text-white">Dev Team</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/vendors.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
